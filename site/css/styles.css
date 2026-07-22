@@ -374,7 +374,6 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
-  /* max-width: 720px; */
   margin: 0 auto;
   text-align: left;
 }

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://badi-2026.retoweber.info/sitemap.xml
