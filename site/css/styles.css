@@ -549,3 +549,22 @@ main {
   height: 85%;
 }
 
+@media (max-width: 480px) {
+  :root {
+    --footer-height: 3.5rem;
+  }
+
+  .site-footer {
+    gap: 0.4rem;
+    padding: 0 0.6rem;
+  }
+
+  .site-footer__logo--gl {
+    height: 20%;
+  }
+
+  .site-footer__logo--fdp {
+    height: 38%;
+  }
+}
+

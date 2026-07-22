@@ -159,10 +159,15 @@
 
   <!-- Party logos, always visible at the bottom of the viewport -->
   <footer class="site-footer">
-    <a href="https://beringen.spsh.ch"><img class="site-footer__logo site-footer__logo--sp" src="assets/elements/logo-sp.svg" alt="SP Sozialdemokratische Partei Beringen"></a>
+    <a href="https://beringen.spsh.ch">
+      <picture>
+        <source media="(max-width: 480px)" srcset="assets/elements/logo-sp-mark.svg">
+        <img class="site-footer__logo site-footer__logo--sp" src="assets/elements/logo-sp.svg" alt="SP Sozialdemokratische Partei Beringen">
+      </picture>
+    </a>
     <a href="https://sh.grunliberale.ch"><img class="site-footer__logo site-footer__logo--gl" src="assets/elements/logo-gruenliberale.svg" alt="Grünliberale"></a>
     <a href="https://www.fdp-beringen.ch/willkommen"><img class="site-footer__logo site-footer__logo--fdp" src="assets/elements/logo_fdp.svg" alt="FDP"></a>
-    <a href="https://evp-sh.ch"><img class="site-footer__logo site-footer__logo--evp" src="assets/elements/logo-evp.svg" alt="EVP Evangelische Volkspartei"></a>
+    <a href="https://evp-sh.ch"><img class="site-footer__logo site-footer__logo--evp" src="assets/elements/logo-evp.png" alt="EVP Evangelische Volkspartei"></a>
   </footer>
 
   <script src="js/main.js"></script>

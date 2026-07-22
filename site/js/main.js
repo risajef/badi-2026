@@ -74,11 +74,43 @@ window.setTimeout(scrollToTop, 300);
     legs.classList.remove('is-wiggle');
   }
 
-  poster.addEventListener('pointermove', function (event) {
-    handlePointer(event.clientX, event.clientY);
-  });
+  // Devices with a real pointer (mouse/trackpad) get the hover-proximity
+  // behaviour above. Touch devices can't "hover" near the figures, so
+  // instead loop the same effects automatically, with a pause in between.
+  var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-  poster.addEventListener('pointerleave', reset);
+  if (canHover) {
+    poster.addEventListener('pointermove', function (event) {
+      handlePointer(event.clientX, event.clientY);
+    });
+
+    poster.addEventListener('pointerleave', reset);
+  } else {
+    // Two independent cycles (different hold/pause lengths, offset start)
+    // so the ball and the legs don't move in lockstep - only the pauses
+    // differ here, the actual hover animations (CSS transition durations)
+    // are untouched.
+    var BALL_HOLD = 1800;
+    var BALL_PAUSE = 3000;
+
+    var LEGS_HOLD = 1300;
+    var LEGS_PAUSE = 2500;
+    var LEGS_START_DELAY = 900;
+
+    (function ballCycle() {
+      ball.classList.add('is-away');
+      setTimeout(function () { ball.classList.remove('is-away'); }, BALL_HOLD);
+      setTimeout(ballCycle, BALL_HOLD + BALL_PAUSE);
+    })();
+
+    setTimeout(function legsCycle() {
+      (function () {
+        legs.classList.add('is-wiggle');
+        setTimeout(function () { legs.classList.remove('is-wiggle'); }, LEGS_HOLD);
+        setTimeout(legsCycle, LEGS_HOLD + LEGS_PAUSE);
+      })();
+    }, LEGS_START_DELAY);
+  }
 })();
 
 // Fade sections in as they scroll into view.
