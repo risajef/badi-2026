@@ -373,8 +373,8 @@ main {
 .arguments__secondary {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  max-width: 720px;
+  gap: 1.5rem;
+  /* max-width: 720px; */
   margin: 0 auto;
   text-align: left;
 }
@@ -383,8 +383,8 @@ main {
   background: #ffffff;
   border: 1px solid rgba(0, 91, 145, 0.1);
   border-left: 3px solid var(--color-water);
-  border-radius: 14px;
-  padding: 1.15rem 1.25rem;
+  border-radius: 4px;
+  padding: 0.55rem 1.15rem;
 }
 
 .argument-card__tag {
@@ -413,8 +413,7 @@ main {
   background: #eef6fa;
   border: 1px solid rgba(0, 91, 145, 0.12);
   border-left: 5px solid var(--color-text);
-  border-radius: 16px;
-  padding: 1.75rem;
+  border-radius: 4px;
 }
 
 .argument-card--featured .argument-card__tag {
