@@ -1,0 +1,172 @@
+:root {
+  --color-water: #9CD1C9;
+  --color-text: #005B91;
+  --color-footer-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: var(--color-text);
+  background: #f4f4f4;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+main {
+  display: block;
+}
+
+/* ---- Poster (flyer reproduction) ---- */
+
+.poster-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem;
+}
+
+.poster {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 419.528 / 595.276;
+  background: var(--color-water);
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+.poster__footer-bg {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 86.8654%;
+  height: 13.1346%;
+  background: var(--color-footer-bg);
+}
+
+.el {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Positions taken from the original PDF layout (in % of poster size) */
+
+.el--path2 {
+  right: 0%;
+  top: 0%;
+  width: 50.8109%;
+  height: 28.0953%;
+}
+
+.el--g62 {
+  left: 47.5939%;
+  top: 56.0423%;
+  width: 48.3300%;
+  height: 27.4731%;
+}
+
+.el--path118 {
+  right: 0%;
+  top: 20.1104%;
+  width: 12.5620%;
+  height: 15.5573%;
+}
+
+.el--path122 {
+  left: 74.1141%;
+  top: 35.2381%;
+  width: 15.7466%;
+  height: 18.2173%;
+}
+
+.el--path132 {
+  left: 30.9467%;
+  top: 47.0865%;
+  width: 16.3629%;
+  height: 14.9373%;
+}
+
+.el--path140 {
+  left: 4.0541%;
+  top: 71.6191%;
+  width: 40.8118%;
+  height: 10.9125%;
+}
+
+.el--path147 {
+  left: 69.9301%;
+  top: 7.3334%;
+  width: 11.0906%;
+  height: 16.3718%;
+}
+
+.el--path167 {
+  left: 14.1130%;
+  top: 45.9525%;
+  width: 16.9090%;
+  height: 12.8256%;
+}
+
+.el--g165 {
+  left: 4.5929%;
+  top: 3.9023%;
+  width: 80.5984%;
+  height: 35.8733%;
+}
+
+.el--mc0 {
+  left: 4.7297%;
+  top: 90.5279%;
+  width: 26.2169%;
+  height: 5.1821%;
+}
+
+.el--mc1 {
+  left: 54.2197%;
+  top: 91.8975%;
+  width: 23.2769%;
+  height: 2.3823%;
+}
+
+.el--image117 {
+  left: 84.4509%;
+  top: 89.3066%;
+  width: 10.8192%;
+  height: 7.6250%;
+}
+
+/* ---- Placeholder section for future scroll content ---- */
+
+.more-section {
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+
+.more-section__inner {
+  color: #666;
+  text-align: center;
+}
