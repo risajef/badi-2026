@@ -9,45 +9,155 @@
 </head>
 <body>
 
+  <header class="site-header">
+    <div class="site-header__inner">
+      <span class="site-header__brand">Für üsi Badi</span>
+      <nav class="site-nav">
+        <a href="#argumente">Argumente</a>
+        <a href="#spenden">Spenden</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
     <section class="poster-section">
       <div class="poster" id="poster">
-        <!-- White footer bar (party logos sit on this) -->
-        <div class="poster__footer-bg"></div>
 
         <!-- Vector elements, stacked in original paint order -->
-        <img class="el el--path2"   src="assets/elements/path2.svg"   alt="" aria-hidden="true">
-        <img class="el el--g62"     src="assets/elements/g62.svg"     alt="" aria-hidden="true">
-        <img class="el el--path118" src="assets/elements/path118.svg" alt="" aria-hidden="true">
-        <img class="el el--path122" src="assets/elements/path122.svg" alt="" aria-hidden="true">
-        <img class="el el--path132" src="assets/elements/path132.svg" alt="" aria-hidden="true">
-        <img class="el el--path140" src="assets/elements/path140.svg" alt="" aria-hidden="true">
-        <img class="el el--path147" src="assets/elements/path147.svg" alt="" aria-hidden="true">
-        <img class="el el--path167" src="assets/elements/path167.svg" alt="" aria-hidden="true">
-        <img class="el el--g165"    src="assets/elements/g165.svg"    alt="" aria-hidden="true">
+        <img class="el el--pool-scene"  src="assets/elements/pool-slide-scene.svg" alt="" aria-hidden="true">
+        <img class="el el--tagline"     src="assets/elements/ja-tagline.svg"       alt="" aria-hidden="true">
+        <img class="el el--man-arm"     src="assets/elements/man-arm.svg"          alt="" aria-hidden="true">
+        <img class="el el--man"         src="assets/elements/man-with-ball.svg"    alt="" aria-hidden="true">
+        <img class="el el--water-splash" src="assets/elements/water-splash.svg"    alt="" aria-hidden="true">
+        <img class="el el--woman-legs"  id="woman-legs" src="assets/elements/woman-legs.svg" alt="" aria-hidden="true">
+        <img class="el el--swimmer"     src="assets/elements/swimmer.svg"          alt="" aria-hidden="true">
+        <div class="el el--slide-group">
+          <img class="slide-group__figure" src="assets/elements/sliding-girl.svg" alt="" aria-hidden="true">
+          <p class="poster-bubble slide-group__bubble">Riesenspass für Kinder</p>
+        </div>
+        <img class="el el--woman-torso" src="assets/elements/woman-torso.svg"      alt="" aria-hidden="true">
+        <img class="el el--headline"    src="assets/elements/headline-text.svg"   alt="" aria-hidden="true">
 
-        <img class="el el--mc0"      src="assets/elements/group-MC0.svg" alt="" aria-hidden="true">
-        <img class="el el--mc1"      src="assets/elements/group-MC1.svg" alt="" aria-hidden="true">
-        <img class="el el--image117" src="assets/elements/image117.svg" alt="" aria-hidden="true">
+        <!-- Ball: flies between the man's and the woman's hands on hover -->
+        <img class="el el--ball" id="ball" src="assets/elements/ball.svg" alt="" aria-hidden="true">
+
+        <!-- Argument bubbles, floating over the figures in the water -->
+        <p class="poster-bubble poster-bubble--1">Kein Chlor</p>
+        <p class="poster-bubble poster-bubble--2">Für alle Generationen</p>
+        <p class="poster-bubble poster-bubble--3">Erholung in der Natur</p>
 
         <!-- Accessible text content, hidden visually -->
         <div class="sr-only">
-          <p>Am 27. September 2026:</p>
           <h1>Für üsi Badi</h1>
-          <p>Jetzt handeln statt später von vorne beginnen.</p>
-          <h2>JA zur Sanierung unserer Badi.</h2>
-          <p>SP Sozialdemokratische Partei Beringen &middot; Grünliberale &middot; EVP Evangelische Volkspartei</p>
+          <p>Am 27. September 2026: Jetzt handeln statt später von vorne beginnen.</p>
+          <p>JA zur Sanierung unserer Badi.</p>
         </div>
       </div>
     </section>
 
-    <!-- Placeholder for future scroll content / animations -->
-    <section class="more-section">
-      <div class="more-section__inner">
-        <p>Mehr Informationen folgen in Kürze.</p>
+    <section class="intro reveal">
+      <div class="intro__inner">
+        <p class="intro__eyebrow">Abstimmung vom 27. September 2026</p>
+        <h2>Kein Chlor. Nur Natur.</h2>
+        <p>
+          Beringen stimmt über die Sanierung der Badi ab. Wir setzen uns für ein
+          naturnahes Bad ein &ndash; mit biologischer Wasseraufbereitung statt Chlor,
+          Lebensraum für Pflanzen und Tiere und einem Badeerlebnis wie in einem
+          natürlichen See. Darum sagen wir JA.
+        </p>
       </div>
     </section>
+
+    <section class="arguments reveal" id="argumente">
+      <div class="arguments__inner">
+        <h2>Darum ein JA</h2>
+        <p class="arguments__lead">
+          Diese Argumente sprechen für die Sanierung unserer Badi zu einem
+          naturnahen Erlebnisbad.
+        </p>
+        <div class="arguments__grid">
+          <article class="argument-card">
+            <h3>💧 Kein Chlor</h3>
+            <p>Das Wasser brennt nicht in den Augen und ist angenehmer für Haut und Atemwege &ndash; Baden fühlt sich an wie in einem natürlichen See.</p>
+          </article>
+          <article class="argument-card">
+            <h3>🔬 Bewährte Technik</h3>
+            <p>Die biologische Wasseraufbereitung ist Stand der Technik und kommt unter anderem auch in der Trinkwasseraufbereitung zum Einsatz.</p>
+          </article>
+          <article class="argument-card">
+            <h3>💰 Günstiger als Chlor</h3>
+            <p>Die naturnahe Variante ist über die Zeit gerechnet die wirtschaftlichere Lösung für die Gemeinde.</p>
+          </article>
+          <article class="argument-card">
+            <h3>♻️ Einfache Wasserentsorgung</h3>
+            <p>Ohne Chlor lässt sich das Wasser problemlos und ökologisch unbedenklich entsorgen.</p>
+          </article>
+          <article class="argument-card">
+            <h3>🗳️ Planungssicherheit statt Verzögerung</h3>
+            <p>Die Naturbad-Variante wurde bereits dreimal demokratisch bestätigt. Ein Nein bedeutet erneute Unsicherheit &ndash; zeitlich, finanziell und beim Projekt selbst.</p>
+          </article>
+          <article class="argument-card">
+            <h3>🤝 Treffpunkt für alle Generationen</h3>
+            <p>Die Badi ist der grösste Treffpunkt der Gemeinde &ndash; ein tolles Erlebnis für Kinder und eine Erholungsoase für alle.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-banner reveal">
+      <blockquote>
+        „Natur im Wasser &ndash; im Einklang mit der Natur. Eintauchen, durchatmen.“
+      </blockquote>
+    </section>
+
+    <section class="donate reveal" id="spenden">
+      <div class="donate__inner">
+        <h2>Kampagne unterstützen</h2>
+        <p>
+          Flyer, Plakate und Inserate kosten Geld. Jede Spende hilft mit, dass
+          unsere Botschaft in Beringen ankommt. Herzlichen Dank für deine
+          Unterstützung!
+        </p>
+        <div class="donate__grid">
+          <div class="donate__qr">
+            <img class="qr-code" src="assets/elements/qr_blue.png" alt="QR-Code für Spende per TWINT oder E-Banking">
+          </div>
+          <div class="donate__bank">
+            <dl>
+              <div class="donate__row">
+                <dt>Konto</dt>
+                <dd>EVP Kanton Schaffhausen</dd>
+              </div>
+              <div class="donate__row">
+                <dt>Postkonto</dt>
+                <dd>PC 82-645-0</dd>
+              </div>
+              <div class="donate__row">
+                <dt>IBAN</dt>
+                <dd>CH 58 0900 0000 8200 0645 0</dd>
+              </div>
+              <div class="donate__row">
+                <dt>Vermerk</dt>
+                <dd>Spende Badi</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p class="site-credits">
+      Erstellt von <a href="https://retoweber.info" target="_blank" rel="noopener">Reto Weber</a> (Einwohnerrat EVP)
+    </p>
   </main>
+
+  <!-- Party logos, always visible at the bottom of the viewport -->
+  <footer class="site-footer">
+    <a href="https://beringen.spsh.ch"><img class="site-footer__logo site-footer__logo--sp" src="assets/elements/logo-sp.svg" alt="SP Sozialdemokratische Partei Beringen"></a>
+    <a href="https://sh.grunliberale.ch"><img class="site-footer__logo site-footer__logo--gl" src="assets/elements/logo-gruenliberale.svg" alt="Grünliberale"></a>
+    <a href="https://www.fdp-beringen.ch/willkommen"><img class="site-footer__logo site-footer__logo--fdp" src="assets/elements/logo_fdp.svg" alt="FDP"></a>
+    <a href="https://evp-sh.ch"><img class="site-footer__logo site-footer__logo--evp" src="assets/elements/logo-evp.svg" alt="EVP Evangelische Volkspartei"></a>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
