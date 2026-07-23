@@ -52,17 +52,20 @@ html {
     scroll-behavior: auto;
   }
 
-  .reveal,
+  .reveal>*,
   .poster-bubble,
   .el--slide-group,
   .el--woman-legs,
   .el--ball {
     animation: none !important;
     transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -153,13 +156,13 @@ h2 {
 
 /* ---- Scroll reveal ---- */
 
-.reveal {
+.reveal>* {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.reveal.is-visible {
+.reveal.is-visible>* {
   opacity: 1;
   transform: translateY(0);
 }
@@ -187,6 +190,33 @@ main {
   overflow: hidden;
   box-shadow: var(--shadow-lg);
   border-radius: var(--radius-sm);
+}
+
+
+/* Perspective oval 3D water ripples (concentric rings) */
+.poster-ripple {
+  position: absolute;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.75);
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 2;
+  animation: ripple-oval-expand 0.9s cubic-bezier(0.1, 0.75, 0.3, 1) forwards;
+}
+
+@keyframes ripple-oval-expand {
+  0% {
+    width: 0px;
+    height: 0px;
+    opacity: 0.95;
+    transform: translate(-50%, -50%) scaleY(0.42);
+  }
+  100% {
+    width: 150px;
+    height: 150px;
+    opacity: 0;
+    transform: translate(-50%, -50%) scaleY(0.42);
+  }
 }
 
 .el {
@@ -217,6 +247,12 @@ main {
   top: 20.1104%;
   width: 12.5620%;
   height: 15.5573%;
+  transform-origin: 90% 80%;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.poster:hover .el--man-arm {
+  transform: rotate(-5deg);
 }
 
 .el--man {
@@ -244,6 +280,14 @@ main {
   top: 56.6341%;
   width: 29.6822%;
   height: 5.3897%;
+  animation: splash-pulse 3.5s ease-in-out infinite alternate;
+  transform-origin: 50% 100%;
+}
+
+@keyframes splash-pulse {
+  0% { transform: scale(1) translateY(0); opacity: 0.95; }
+  50% { transform: scale(1.04, 0.94) translateY(-1px); opacity: 1; }
+  100% { transform: scale(0.97, 1.03) translateY(1px); opacity: 0.88; }
 }
 
 .el--swimmer {
@@ -251,6 +295,14 @@ main {
   top: 71.6191%;
   width: 40.8118%;
   height: 10.9125%;
+  animation: swimmer-glide 4.5s ease-in-out infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+@keyframes swimmer-glide {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-2.5px) rotate(-0.8deg); }
+  100% { transform: translateY(1.5px) rotate(0.6deg); }
 }
 
 .el--slide-group {
@@ -281,6 +333,14 @@ main {
   top: 45.9525%;
   width: 16.9090%;
   height: 12.8256%;
+  animation: woman-bob 5s ease-in-out infinite alternate;
+  transform-origin: 50% 100%;
+}
+
+@keyframes woman-bob {
+  0% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-2px) rotate(0.6deg); }
+  100% { transform: translateY(1px) rotate(-0.4deg); }
 }
 
 .el--headline {
@@ -298,8 +358,8 @@ main {
   width: 7.1854%;
   height: 5.0904%;
   transition: left var(--transition-bounce),
-              top var(--transition-bounce),
-              transform 0.7s ease;
+    top var(--transition-bounce),
+    transform 0.7s ease;
   z-index: 5;
 }
 
@@ -314,72 +374,135 @@ main {
     transform: translateY(68%) translateX(-20%);
     opacity: 1;
   }
+
   58% {
     transform: translateY(78%) translateX(-20%);
     opacity: 0;
   }
-  59%, 60% {
+
+  59%,
+  60% {
     transform: translateY(-130%) translateX(20%);
     opacity: 0;
   }
-  60%, 61% {
+
+  60%,
+  61% {
     transform: translateY(-130%) translateX(20%);
     opacity: 1;
   }
-  60%, 100% {
+
+  60%,
+  100% {
     transform: translateY(0) translateX(0);
     opacity: 1;
   }
 }
 
-/* ---- Argument bubbles floating over the poster figures ---- */
+/* ---- Argument speech bubbles floating over the poster figures ---- */
 
 .poster-bubble {
   position: absolute;
   margin: 0;
   z-index: 6;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--color-text);
   font-weight: 700;
-  font-size: clamp(0.6rem, 0.45rem + 0.6vw, 0.85rem);
-  line-height: 1.2;
-  padding: 0.35em 0.75em;
-  border-radius: var(--radius-full);
-  box-shadow: var(--shadow-md);
+  font-size: clamp(0.62rem, 0.46rem + 0.6vw, 0.85rem);
+  line-height: 1.25;
+  padding: 0.42em 0.85em;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
   white-space: nowrap;
   pointer-events: none;
   animation: bubble-float 4s ease-in-out infinite;
 }
 
+/* Speech bubble tail pointers (responsive relative positioning) */
+.poster-bubble::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.08));
+}
+
+/* 1. "Kein Chlor" (Bottom left swimmer - centered tail tick) */
 .poster-bubble--1 {
   left: 3%;
   top: 68%;
   transform: rotate(-3deg);
   animation-delay: 0s;
+  border-radius: 14px;
 }
 
-.poster-bubble--2 {
+.poster-bubble--1::after {
   left: 50%;
-  top: 45%;
+  transform: translateX(-50%);
+  bottom: -7px;
+  border-width: 7px 6px 0 6px;
+  border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+}
+
+/* 2. "Für alle Generationen" (Upper right swimmer - right-side edge tick) */
+.poster-bubble--2 {
+  left: 45%;
+  top: 42%;
   transform: rotate(2deg);
   animation-delay: 0.7s;
+  border-radius: 14px;
 }
 
+.poster-bubble--2::after {
+  right: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.95);
+}
+
+/* 3. "Erholung in der Natur" (Dark hair swimmer - tail tick anchored at 20% from right) */
 .poster-bubble--3 {
   left: 2%;
   top: 43%;
   transform: rotate(-2deg);
   animation-delay: 1.4s;
+  border-radius: 14px;
 }
 
+.poster-bubble--3::after {
+  right: 20%;
+  bottom: -7px;
+  border-width: 7px 0 0 8px;
+  border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
+}
+
+/* 4. "Riesenspass für Kinder" (Sliding girl - right-side edge tick) */
 .slide-group__bubble {
   transform: rotate(3deg);
   animation-delay: 2.1s;
+  border-radius: 14px;
+}
+
+.slide-group__bubble::after {
+  right: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 5px 0 5px 7px;
+  border-color: transparent transparent transparent rgba(255, 255, 255, 0.95);
 }
 
 @keyframes bubble-float {
-  0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); }
-  50% { transform: translateY(-6px) rotate(var(--r, 0deg)); }
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(var(--r, 0deg));
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(var(--r, 0deg));
+  }
 }
 
 /* ---- Intro ---- */
@@ -513,22 +636,86 @@ main {
   color: var(--color-text-dark);
 }
 
-/* ---- Quote banner ---- */
+/* ---- Quote banner with stylized water ---- */
 
 .quote-banner {
-  padding: 4rem 1.5rem;
-  background: var(--color-primary);
+  position: relative;
+  padding: 5.5rem 1.5rem;
+  background: linear-gradient(135deg, #003e63 0%, #005B91 35%, #197B85 70%, #6ba79c 100%);
   color: #ffffff;
   text-align: center;
+  overflow: hidden;
+  box-shadow: inset 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Water ripple caustics background animation */
+.quote-banner::before {
+  content: "";
+  position: absolute;
+  top: -60%;
+  left: -50%;
+  width: 200%;
+  height: 220%;
+  background:
+    radial-gradient(ellipse at 25% 40%, rgba(255, 255, 255, 0.18) 0%, transparent 50%),
+    radial-gradient(ellipse at 75% 65%, rgba(156, 209, 201, 0.25) 0%, transparent 55%),
+    radial-gradient(ellipse at 50% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 45%);
+  animation: water-caustics 14s ease-in-out infinite alternate;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Bottom stylized SVG water wave layer (100% seamless repeat) */
+.quote-banner::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2400px;
+  height: 45px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M 0,50 C 150,80 300,80 450,50 C 525,35 575,35 600,50 C 750,80 900,80 1050,50 C 1125,35 1175,35 1200,50 L 1200,120 L 0,120 Z' fill='%23ffffff' opacity='0.14'%3E%3C/path%3E%3Cpath d='M 0,35 C 150,15 300,15 450,35 C 525,50 575,50 600,35 C 750,15 900,15 1050,35 C 1125,50 1175,50 1200,35 L 1200,120 L 0,120 Z' fill='%23ffffff' opacity='0.2'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 1200px 45px;
+  background-repeat: repeat-x;
+  animation: wave-flow 24s linear infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes water-caustics {
+  0% {
+    transform: rotate(0deg) scale(1) translateY(0);
+  }
+
+  50% {
+    transform: rotate(2deg) scale(1.05) translateY(-10px);
+  }
+
+  100% {
+    transform: rotate(-2deg) scale(0.98) translateY(10px);
+  }
+}
+
+@keyframes wave-flow {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-600px);
+  }
 }
 
 .quote-banner blockquote {
-  max-width: 700px;
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
   margin: 0 auto;
-  font-size: clamp(1.2rem, 1rem + 1vw, 1.7rem);
+  font-size: clamp(1.25rem, 1.05rem + 1.1vw, 1.85rem);
   font-weight: 600;
-  line-height: 1.5;
+  line-height: 1.55;
   font-style: italic;
+  text-shadow: 0 2px 10px rgba(0, 40, 70, 0.4);
+  letter-spacing: 0.01em;
 }
 
 /* ---- Donate ---- */
@@ -544,7 +731,7 @@ main {
   text-align: center;
 }
 
-.donate__inner > p {
+.donate__inner>p {
   max-width: 560px;
   margin: 0 auto 2.5rem;
   color: var(--color-text-muted);
@@ -606,8 +793,25 @@ main {
     text-align: center;
   }
 
+  .donate__bank {
+    display: inline-block;
+    text-align: left;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
   .donate__row {
-    justify-content: center;
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  .donate__row dt {
+    flex: 0 0 85px;
+    text-align: left;
+  }
+
+  .donate__row dd {
+    text-align: left;
   }
 }
 

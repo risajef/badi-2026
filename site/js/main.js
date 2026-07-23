@@ -84,6 +84,24 @@ document.addEventListener('DOMContentLoaded', handleInitialScroll);
     legs.classList.remove('is-wiggle');
   }
 
+  // Interactive water ripple on tap/click (3 concentric oval rings)
+  poster.addEventListener('pointerdown', (e) => {
+    const rect = poster.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    for (let i = 0; i < 3; i++) {
+      setTimeout(() => {
+        const ripple = document.createElement('span');
+        ripple.className = 'poster-ripple';
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        poster.appendChild(ripple);
+        setTimeout(() => ripple.remove(), 900);
+      }, i * 140);
+    }
+  });
+
   const canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
 
   if (canHover) {
