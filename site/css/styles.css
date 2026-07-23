@@ -1106,3 +1106,19 @@ main {
   color: #ffffff;
   border-color: #27ae60;
 }
+
+/* ---- Content Links ---- */
+
+.argument-card p a,
+.faq__answer a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.argument-card p a:hover,
+.faq__answer a:hover {
+  color: #003a5e;
+}
