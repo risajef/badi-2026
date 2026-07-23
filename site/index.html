@@ -118,7 +118,7 @@
   <header class="site-header">
     <div class="site-header__inner">
       <span class="site-header__brand">Für üsi Badi</span>
-      <nav class="site-nav">
+      <nav class="site-nav" aria-label="Hauptnavigation">
         <a href="#argumente">Argumente</a>
         <a href="#spenden">Spenden</a>
       </nav>
@@ -126,7 +126,7 @@
   </header>
 
   <main>
-    <section class="poster-section">
+    <section class="poster-section" aria-label="Kampagnen-Keyvisual">
       <div class="poster" id="poster">
 
         <!-- Vector elements, stacked in original paint order -->
@@ -185,12 +185,12 @@
           <article class="argument-card argument-card--featured">
             <p class="argument-card__tag">Finanzierung</p>
             <h3>Günstiger als Chlor</h3>
-            <p>Die naturnahe Variante ist über die Zeit gerechnet die <b>wirtschaftlichere Lösung</b> für die Gemeinde &ndash; tiefere Betriebskosten als eine Chlorlösung.</p>
+            <p>Die naturnahe Variante ist über die Zeit gerechnet die <strong>wirtschaftlichere Lösung</strong> für die Gemeinde &ndash; tiefere Betriebskosten als eine Chlorlösung.</p>
           </article>
           <article class="argument-card argument-card--featured">
             <p class="argument-card__tag">Planungssicherheit</p>
             <h3>Jetzt entscheiden statt verzögern</h3>
-            <p>Die vorgeschlagene Variante wurde <b>mehrfach</b> demokratisch bestätigt und setzt auf bewährte Technik, die sich auch in der <b>Trinkwasseraufbereitung</b> bewährt hat. Ein Nein bedeutet erneute <i style="color: #e74c3c;">Unsicherheit</i> &ndash; zeitlich, finanziell und beim Projekt selbst.</p>
+            <p>Die vorgeschlagene Variante wurde <strong>mehrfach</strong> demokratisch bestätigt und setzt auf bewährte Technik, die sich auch in der <strong>Trinkwasseraufbereitung</strong> bewährt hat. Ein Nein bedeutet erneute <em class="text-danger">Unsicherheit</em> &ndash; zeitlich, finanziell und beim Projekt selbst.</p>
           </article>
         </div>
 
@@ -263,15 +263,21 @@
 
   <!-- Party logos, always visible at the bottom of the viewport -->
   <footer class="site-footer">
-    <a href="https://beringen.spsh.ch">
+    <a href="https://beringen.spsh.ch" aria-label="SP Sozialdemokratische Partei Beringen">
       <picture>
         <source media="(max-width: 480px)" srcset="assets/elements/logo-sp-mark.svg">
         <img class="site-footer__logo site-footer__logo--sp" src="assets/elements/logo-sp.svg" alt="SP Sozialdemokratische Partei Beringen">
       </picture>
     </a>
-    <a href="https://sh.grunliberale.ch"><img class="site-footer__logo site-footer__logo--gl" src="assets/elements/logo-gruenliberale.svg" alt="Grünliberale"></a>
-    <a href="https://www.fdp-beringen.ch/willkommen"><img class="site-footer__logo site-footer__logo--fdp" src="assets/elements/logo_fdp.svg" alt="FDP"></a>
-    <a href="https://evp-sh.ch"><img class="site-footer__logo site-footer__logo--evp" src="assets/elements/logo-evp.png" alt="EVP Evangelische Volkspartei"></a>
+    <a href="https://sh.grunliberale.ch" aria-label="Grünliberale Schaffhausen">
+      <img class="site-footer__logo site-footer__logo--gl" src="assets/elements/logo-gruenliberale.svg" alt="Grünliberale">
+    </a>
+    <a href="https://www.fdp-beringen.ch/willkommen" aria-label="FDP Beringen">
+      <img class="site-footer__logo site-footer__logo--fdp" src="assets/elements/logo_fdp.svg" alt="FDP">
+    </a>
+    <a href="https://evp-sh.ch" aria-label="EVP Evangelische Volkspartei">
+      <img class="site-footer__logo site-footer__logo--evp" src="assets/elements/logo-evp.png" alt="EVP Evangelische Volkspartei">
+    </a>
   </footer>
 
   <script src="js/main.js"></script>

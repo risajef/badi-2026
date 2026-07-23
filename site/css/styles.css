@@ -1,12 +1,65 @@
 :root {
+  /* Brand & Theme Palette */
   --color-water: #9CD1C9;
+  --color-water-dark: #86BCB4;
+  --color-water-light: #E8F4F2;
+  --color-primary: #005B91;
+  --color-primary-hover: #004874;
   --color-text: #005B91;
+  --color-text-dark: #333333;
+  --color-text-muted: #4a4a4a;
+  --color-tag: #6ba79c;
+  --color-danger: #e74c3c;
+
+  /* Surfaces & Backgrounds */
+  --color-body-bg: #f4f4f4;
+  --color-card-bg: #ffffff;
+  --color-card-featured-bg: #eef6fa;
   --color-footer-bg: #ffffff;
+  --color-header-bg: rgba(255, 255, 255, 0.92);
+
+  /* Borders & Shadows */
+  --color-border: rgba(0, 91, 145, 0.1);
+  --color-border-featured: rgba(0, 91, 145, 0.15);
+  --shadow-sm: 0 1px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.15);
+
+  /* Layout & Geometry */
   --footer-height: 4.5rem;
+  --max-width-header: 1000px;
+  --max-width-content: 1000px;
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-full: 999px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-bounce: 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .poster-bubble,
+  .el--slide-group,
+  .el--woman-legs,
+  .el--ball {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 html, body {
@@ -15,15 +68,35 @@ html, body {
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--color-text);
-  background: #f4f4f4;
+  background: var(--color-body-bg);
   padding-bottom: var(--footer-height);
+  line-height: 1.5;
 }
 
 h2 {
   font-size: clamp(1.5rem, 1.1rem + 1.5vw, 2.25rem);
   margin: 0 0 1rem;
+}
+
+/* Utility Classes */
+.text-danger {
+  color: var(--color-danger);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ---- Header / navigation ---- */
@@ -32,13 +105,14 @@ h2 {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.08);
+  background: var(--color-header-bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: var(--shadow-sm);
 }
 
 .site-header__inner {
-  max-width: 1000px;
+  max-width: var(--max-width-header);
   margin: 0 auto;
   padding: 0.9rem 1.5rem;
   display: flex;
@@ -49,6 +123,7 @@ h2 {
 .site-header__brand {
   font-weight: 700;
   letter-spacing: 0.02em;
+  font-size: 1.1rem;
 }
 
 .site-nav {
@@ -61,10 +136,19 @@ h2 {
   text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .site-nav a:hover {
   text-decoration: underline;
+  background-color: rgba(0, 91, 145, 0.06);
+}
+
+.site-nav a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 /* ---- Scroll reveal ---- */
@@ -80,18 +164,6 @@ h2 {
   transform: translateY(0);
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
 main {
   display: block;
 }
@@ -103,7 +175,7 @@ main {
   justify-content: center;
   align-items: flex-start;
   padding: 2rem 1rem;
-  background: linear-gradient(180deg, #f4f4f4 0%, var(--color-water) 100%);
+  background: linear-gradient(180deg, var(--color-body-bg) 0%, var(--color-water) 100%);
 }
 
 .poster {
@@ -113,7 +185,8 @@ main {
   aspect-ratio: 419.528 / 595.276;
   background: var(--color-water);
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-sm);
 }
 
 .el {
@@ -224,8 +297,8 @@ main {
   top: 35.2381%;
   width: 7.1854%;
   height: 5.0904%;
-  transition: left 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
-              top 0.7s cubic-bezier(0.34, 1.56, 0.64, 1),
+  transition: left var(--transition-bounce),
+              top var(--transition-bounce),
               transform 0.7s ease;
   z-index: 5;
 }
@@ -237,10 +310,6 @@ main {
 }
 
 @keyframes slide-loop {
-  /* 0% {
-    transform: translateY(0);
-    opacity: 1;
-  } */
   45% {
     transform: translateY(68%) translateX(-20%);
     opacity: 1;
@@ -269,14 +338,14 @@ main {
   position: absolute;
   margin: 0;
   z-index: 6;
-  background: rgba(255, 255, 255, 0.88);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--color-text);
   font-weight: 700;
   font-size: clamp(0.6rem, 0.45rem + 0.6vw, 0.85rem);
   line-height: 1.2;
   padding: 0.35em 0.75em;
-  border-radius: 999px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
   white-space: nowrap;
   pointer-events: none;
   animation: bubble-float 4s ease-in-out infinite;
@@ -316,7 +385,7 @@ main {
 /* ---- Intro ---- */
 
 .intro {
-  padding: 3rem 1.5rem;
+  padding: 3.5rem 1.5rem;
   background: var(--color-water);
 }
 
@@ -346,12 +415,12 @@ main {
 /* ---- Arguments ---- */
 
 .arguments {
-  padding: 4rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   background: #ffffff;
 }
 
 .arguments__inner {
-  max-width: 1000px;
+  max-width: var(--max-width-content);
   margin: 0 auto;
   text-align: center;
 }
@@ -359,7 +428,7 @@ main {
 .arguments__lead {
   max-width: 560px;
   margin: 0 auto 2.5rem;
-  color: #4a4a4a;
+  color: var(--color-text-muted);
 }
 
 .arguments__featured {
@@ -379,11 +448,18 @@ main {
 }
 
 .argument-card {
-  background: #ffffff;
-  border: 1px solid rgba(0, 91, 145, 0.1);
-  border-left: 3px solid var(--color-water);
-  border-radius: 4px;
-  padding: 0.55rem 1.15rem;
+  background: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-water);
+  border-radius: var(--radius-sm);
+  padding: 0.8rem 1.25rem;
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+}
+
+.argument-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--color-water-dark);
 }
 
 .argument-card__tag {
@@ -393,31 +469,37 @@ main {
   font-weight: 700;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: #6ba79c;
+  color: var(--color-tag);
 }
 
 .argument-card h3 {
   margin: 0 0 0.4rem;
-  font-size: 0.98rem;
+  font-size: 1.05rem;
 }
 
 .argument-card p {
   margin: 0;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   line-height: 1.5;
-  color: #4a4a4a;
+  color: var(--color-text-muted);
 }
 
 .argument-card--featured {
-  background: #eef6fa;
-  border: 1px solid rgba(0, 91, 145, 0.12);
-  border-left: 5px solid var(--color-text);
-  border-radius: 4px;
+  background: var(--color-card-featured-bg);
+  border: 1px solid var(--color-border-featured);
+  border-left: 5px solid var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+.argument-card--featured:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--color-primary-hover);
 }
 
 .argument-card--featured .argument-card__tag {
   font-size: 0.75rem;
-  color: var(--color-text);
+  color: var(--color-primary);
 }
 
 .argument-card--featured h3 {
@@ -428,15 +510,15 @@ main {
 .argument-card--featured p {
   font-size: 0.98rem;
   line-height: 1.55;
-  color: #333333;
+  color: var(--color-text-dark);
 }
 
 /* ---- Quote banner ---- */
 
 .quote-banner {
-  padding: 3.5rem 1.5rem;
-  background: var(--color-text);
-  color: #fff;
+  padding: 4rem 1.5rem;
+  background: var(--color-primary);
+  color: #ffffff;
   text-align: center;
 }
 
@@ -452,7 +534,7 @@ main {
 /* ---- Donate ---- */
 
 .donate {
-  padding: 4rem 1.5rem;
+  padding: 4.5rem 1.5rem;
   background: #ffffff;
 }
 
@@ -465,7 +547,7 @@ main {
 .donate__inner > p {
   max-width: 560px;
   margin: 0 auto 2.5rem;
-  color: #4a4a4a;
+  color: var(--color-text-muted);
   line-height: 1.6;
 }
 
@@ -486,8 +568,13 @@ main {
 .qr-code {
   width: 160px;
   height: 170px;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base);
+}
+
+.qr-code:hover {
+  transform: scale(1.03);
 }
 
 .donate__bank dl {
@@ -498,13 +585,13 @@ main {
   display: flex;
   gap: 0.75rem;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-body-bg);
 }
 
 .donate__row dt {
   flex: 0 0 90px;
   font-weight: 700;
-  color: #4a4a4a;
+  color: var(--color-text-muted);
 }
 
 .donate__row dd {
@@ -530,14 +617,19 @@ main {
   margin: 0;
   padding: 1.5rem 1rem;
   text-align: center;
-  font-size: 0.75rem;
-  color: #999;
+  font-size: 0.78rem;
+  color: #888888;
   background: #ffffff;
 }
 
 .site-credits a {
   color: inherit;
   font-weight: 600;
+  transition: color var(--transition-fast);
+}
+
+.site-credits a:hover {
+  color: var(--color-primary);
 }
 
 /* ---- Fixed footer with party logos ---- */
@@ -549,7 +641,7 @@ main {
   width: 100%;
   height: var(--footer-height);
   background: var(--color-footer-bg);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -562,6 +654,18 @@ main {
   height: 100%;
   display: flex;
   align-items: center;
+  border-radius: var(--radius-sm);
+  padding: 0 0.25rem;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.site-footer a:hover {
+  opacity: 0.85;
+  transform: translateY(-1px);
+}
+
+.site-footer a:focus-visible {
+  outline: 2px solid var(--color-primary);
 }
 
 .site-footer__logo {
@@ -588,7 +692,7 @@ main {
 
 @media (max-width: 480px) {
   :root {
-    --footer-height: 3.5rem;
+    --footer-height: 3.75rem;
   }
 
   .site-footer {
@@ -604,4 +708,3 @@ main {
     height: 38%;
   }
 }
-
