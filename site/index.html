@@ -117,9 +117,19 @@
 
   <header class="site-header">
     <div class="site-header__inner">
-      <span class="site-header__brand">Für üsi Badi</span>
+      <div class="site-header__brand-group">
+        <span class="site-header__brand">Für üsi Badi</span>
+        <div class="header-countdown" id="header-countdown" aria-label="Countdown bis zur Abstimmung">
+          <svg class="header-countdown__icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span class="header-countdown__val" id="countdown-val">Noch -- Tage</span>
+        </div>
+      </div>
       <nav class="site-nav" aria-label="Hauptnavigation">
         <a href="#argumente">Argumente</a>
+        <a href="#faq">FAQ</a>
         <a href="#spenden">Spenden</a>
       </nav>
     </div>
@@ -163,7 +173,16 @@
 
     <section class="intro reveal">
       <div class="intro__inner">
-        <p class="intro__eyebrow">Abstimmung vom 27. September 2026</p>
+        <div class="vote-badge" id="vote-badge">
+          <svg class="vote-badge__icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+            <line x1="16" y1="2" x2="16" y2="6"></line>
+            <line x1="8" y1="2" x2="8" y2="6"></line>
+            <line x1="3" y1="10" x2="21" y2="10"></line>
+          </svg>
+          <span class="vote-badge__text">Volksabstimmung: <strong>27. September 2026</strong></span>
+        </div>
+
         <h2>Jetzt handeln statt später von vorne beginnen.</h2>
         <p>
           Beringen stimmt über die Sanierung der Badi im Chläggi ab. Das
@@ -183,26 +202,71 @@
 
         <div class="arguments__featured">
           <article class="argument-card argument-card--featured">
-            <p class="argument-card__tag">Finanzierung</p>
-            <h3>Günstiger als Chlor</h3>
+            <div class="argument-card__header">
+              <div class="argument-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="6" width="20" height="12" rx="2"></rect>
+                  <circle cx="12" cy="12" r="3"></circle>
+                  <path d="M6 12h.01M18 12h.01"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="argument-card__tag">Finanzierung</span>
+                <h3>Günstiger als Chlor</h3>
+              </div>
+            </div>
             <p>Die naturnahe Variante ist über die Zeit gerechnet die <strong>wirtschaftlichere Lösung</strong> für die Gemeinde &ndash; tiefere Betriebskosten als eine Chlorlösung.</p>
           </article>
+
           <article class="argument-card argument-card--featured">
-            <p class="argument-card__tag">Planungssicherheit</p>
-            <h3>Jetzt entscheiden statt verzögern</h3>
+            <div class="argument-card__header">
+              <div class="argument-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <polyline points="9 12 11 14 15 10"></polyline>
+                </svg>
+              </div>
+              <div>
+                <span class="argument-card__tag">Planungssicherheit</span>
+                <h3>Jetzt entscheiden statt verzögern</h3>
+              </div>
+            </div>
             <p>Die vorgeschlagene Variante wurde <strong>mehrfach</strong> demokratisch bestätigt und setzt auf bewährte Technik, die sich auch in der <strong>Trinkwasseraufbereitung</strong> bewährt hat. Ein Nein bedeutet erneute <em class="text-danger">Unsicherheit</em> &ndash; zeitlich, finanziell und beim Projekt selbst.</p>
           </article>
         </div>
 
         <div class="arguments__secondary">
           <article class="argument-card">
-            <p class="argument-card__tag">Ökologie</p>
-            <h3>Naturnah statt Chlor</h3>
+            <div class="argument-card__header">
+              <div class="argument-card__icon argument-card__icon--secondary" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 9 0 5-4 9-10 9z"></path>
+                  <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="argument-card__tag">Ökologie</span>
+                <h3>Naturnah statt Chlor</h3>
+              </div>
+            </div>
             <p>Der Bioschnellfilter reinigt das Wasser ohne Chlor und ermöglicht eine einfache Entsorgung &ndash; ein Bad, das sich anfühlt wie ein natürlicher See.</p>
           </article>
+
           <article class="argument-card">
-            <p class="argument-card__tag">Gemeinschaft</p>
-            <h3>Treffpunkt für alle Generationen</h3>
+            <div class="argument-card__header">
+              <div class="argument-card__icon argument-card__icon--secondary" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <span class="argument-card__tag">Gemeinschaft</span>
+                <h3>Treffpunkt für alle Generationen</h3>
+              </div>
+            </div>
             <p>Die Badi ist der grösste Treffpunkt der Gemeinde &ndash; ein Erlebnis für Kinder und Erholung für alle.</p>
           </article>
         </div>
@@ -213,6 +277,63 @@
       <blockquote>
         „Natur im Wasser &ndash; im Einklang mit der Natur. Eintauchen, durchatmen.“
       </blockquote>
+    </section>
+
+    <section class="faq reveal" id="faq">
+      <div class="faq__inner">
+        <h2>Häufige Fragen (FAQ)</h2>
+        <p class="faq__lead">Antworten auf die wichtigsten Fragen zur Badi-Sanierung in Beringen.</p>
+
+        <div class="faq__accordion">
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Warum ist die naturnahe Sanierung günstiger als Chlor?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq__answer">
+              <p>Die naturnahe Variante mit Bioschnellfilter hat über die Zeit gerechnet signifikant tiefere Betriebskosten und Wartungsausgaben als eine chemische Chloranlage. Für die Gemeinde Beringen ist sie damit die wirtschaftlichste Lösung.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Warum ist jetzt Planungssicherheit für die Sanierung wichtig?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq__answer">
+              <p>Die vorgeschlagene Variante mit Bioschnellfilter wurde bereits mehrfach demokratisch bestätigt. Ein NEIN am 27. September 2026 würde erneute Unsicherheit auslösen &ndash; zeitlich, finanziell und beim Projekt selbst.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Wie funktioniert die biologische Wasseraufbereitung ohne Chlor?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq__answer">
+              <p>Statt Chlor reinigt ein Bioschnellfilter das Wasser auf rein natürliche Weise. Dieselbe bewährte Filtertechnik wird auch in der Trinkwasseraufbereitung eingesetzt. Das Ergebnis ist ein chlorfreies Bad, das sich anfühlt wie ein natürlicher See. Weitere Details finden Sie im offiziellen <a href="https://www.beringen.ch/uploads/files/pdf/Behoerde-Politik/Einwohnerrat/Vorlagen/2026/2026-01-02%20Vorlage%20Komplettsanierung%20Gwaagge-Badi%20-%20Beilage%201%20Technischer%20Bericht.pdf" target="_blank" rel="noopener">Technischen Bericht der Gemeinde Beringen (PDF)</a>.</p>
+            </div>
+          </details>
+
+          <details class="faq__item">
+            <summary class="faq__question">
+              <span>Wann findet die Abstimmung über die Badi Beringen statt?</span>
+              <svg class="faq__chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </summary>
+            <div class="faq__answer">
+              <p>Die Volksabstimmung über die Sanierung der Badi Beringen im Chläggi findet am <strong>27. September 2026</strong> statt.</p>
+            </div>
+          </details>
+        </div>
+      </div>
     </section>
 
     <section class="donate reveal" id="spenden">
@@ -242,9 +363,18 @@
                 <dt>Postkonto</dt>
                 <dd>PC 82-645-0</dd>
               </div>
-              <div class="donate__row">
+              <div class="donate__row donate__row--iban">
                 <dt>IBAN</dt>
-                <dd>CH 58 0900 0000 8200 0645 0</dd>
+                <dd class="iban-wrapper">
+                  <span id="iban-val">CH 58 0900 0000 8200 0645 0</span>
+                  <button type="button" class="btn-copy-iban" id="btn-copy-iban" aria-label="IBAN in Zwischenablage kopieren">
+                    <svg class="icon-copy" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span class="btn-copy-text">Kopieren</span>
+                  </button>
+                </dd>
               </div>
               <div class="donate__row">
                 <dt>Vermerk</dt>

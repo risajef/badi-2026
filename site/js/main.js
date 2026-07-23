@@ -187,3 +187,77 @@ document.addEventListener('DOMContentLoaded', handleInitialScroll);
 
   revealEls.forEach((el) => observer.observe(el));
 })();
+
+// -----------------------------------------------------------------------------
+// Copy IBAN Button
+// -----------------------------------------------------------------------------
+
+(function initCopyIban() {
+  const copyBtn = document.getElementById('btn-copy-iban');
+  if (!copyBtn) return;
+
+  copyBtn.addEventListener('click', async () => {
+    const ibanValue = 'CH5809000000820006450';
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(ibanValue);
+      } else {
+        const textarea = document.createElement('textarea');
+        textarea.value = ibanValue;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+      }
+
+      const copyTextSpan = copyBtn.querySelector('.btn-copy-text');
+      const originalText = copyTextSpan.textContent;
+      copyTextSpan.textContent = 'Kopiert! ✓';
+      copyBtn.classList.add('is-copied');
+
+      setTimeout(() => {
+        copyTextSpan.textContent = originalText;
+        copyBtn.classList.remove('is-copied');
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy IBAN', err);
+    }
+  });
+})();
+
+// -----------------------------------------------------------------------------
+// Live Countdown to 27. September 2026, 10:00
+// -----------------------------------------------------------------------------
+
+(function initCountdown() {
+  const countdownVal = document.getElementById('countdown-val');
+  if (!countdownVal) return;
+
+  // Target: 27. September 2026 at 10:00 AM local time
+  const targetDate = new Date('2026-09-27T10:00:00').getTime();
+
+  function updateCountdown() {
+    const now = Date.now();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      countdownVal.textContent = 'Abstimmung läuft!';
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+    if (days > 0) {
+      countdownVal.textContent = `Noch ${days}d ${hours}h`;
+    } else if (hours > 0) {
+      countdownVal.textContent = `Noch ${hours}h ${mins}m`;
+    } else {
+      countdownVal.textContent = `Noch ${mins} Min.`;
+    }
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 30000);
+})();
