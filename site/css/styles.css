@@ -238,6 +238,7 @@ main {
     opacity: 0.95;
     transform: translate(-50%, -50%) scaleY(0.42);
   }
+
   100% {
     width: 150px;
     height: 150px;
@@ -256,7 +257,7 @@ main {
 /* Positions taken from the original PDF layout (in % of poster size) */
 
 .el--pool-scene {
-  right: -6%;
+  right: -8%;
   top: 0%;
   width: 54.8109%;
   height: 30.0953%;
@@ -264,14 +265,15 @@ main {
 
 .el--tagline {
   left: 47.5939%;
-  top: 56.0423%;
+  top: 70.0423%;
   width: 48.3300%;
   height: 27.4731%;
+  z-index: 10;
 }
 
 .el--man-arm {
   right: 0%;
-  top: 20.1104%;
+  top: 30.1104%;
   width: 12.5620%;
   height: 15.5573%;
   transform-origin: 90% 80%;
@@ -284,9 +286,9 @@ main {
 
 .el--man {
   left: 74.1141%;
-  top: 35.2381%;
-  width: 15.7466%;
-  height: 18.2173%;
+  top: 45.2381%;
+  width: 14.7466%;
+  height: 17.2173%;
   transform: scale(0.85);
   transform-origin: center center;
 }
@@ -305,34 +307,55 @@ main {
 }
 
 .el--water-splash {
+  visibility: hidden;
   left: 14.1130%;
   top: 56.6341%;
   width: 29.6822%;
   height: 5.3897%;
   animation: splash-pulse 3.5s ease-in-out infinite alternate;
   transform-origin: 50% 100%;
-  clip-path: inset(0 50% 0 0); /* only show left splash for torso, legs use their own */
+  clip-path: inset(0 50% 0 0);
+  /* only show left splash for torso, legs use their own */
 }
 
 @keyframes splash-pulse {
-  0% { transform: scale(1) translateY(0); opacity: 0.95; }
-  50% { transform: scale(1.04, 0.94) translateY(-1px); opacity: 1; }
-  100% { transform: scale(0.97, 1.03) translateY(1px); opacity: 0.88; }
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 0.95;
+  }
+
+  50% {
+    transform: scale(1.04, 0.94) translateY(-1px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.97, 1.03) translateY(1px);
+    opacity: 0.88;
+  }
 }
 
 .el--swimmer {
   left: 4.0541%;
   top: 71.6191%;
-  width: 40.8118%;
-  height: 10.9125%;
+  width: 45.8118%;
+  height: 12.9125%;
   animation: swimmer-glide 4.5s ease-in-out infinite alternate;
   transform-origin: 50% 50%;
 }
 
 @keyframes swimmer-glide {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-2.5px) rotate(-0.8deg); }
-  100% { transform: translateY(1.5px) rotate(0.6deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-2.5px) rotate(-0.8deg);
+  }
+
+  100% {
+    transform: translateY(1.5px) rotate(0.6deg);
+  }
 }
 
 .el--slide-group {
@@ -362,13 +385,29 @@ main {
 }
 
 @keyframes alternate-figure-1 {
-  0%, 49.99% { opacity: 1; }
-  50%, 100% { opacity: 0; }
+
+  0%,
+  49.99% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
 }
 
 @keyframes alternate-figure-2 {
-  0%, 49.99% { opacity: 0; }
-  50%, 100% { opacity: 1; }
+
+  0%,
+  49.99% {
+    opacity: 0;
+  }
+
+  50%,
+  100% {
+    opacity: 1;
+  }
 }
 
 .slide-group__bubble {
@@ -379,8 +418,8 @@ main {
 .el--woman-torso {
   left: 14.1130%;
   top: 45.9525%;
-  width: 16.9090%;
-  height: 12.8256%;
+  width: 14.9090%;
+  height: 10.3256%;
   animation: woman-bob 5s ease-in-out infinite alternate;
   transform-origin: 50% 100%;
 }
@@ -393,9 +432,17 @@ main {
 }
 
 @keyframes woman-bob {
-  0% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-2px) rotate(0.6deg); }
-  100% { transform: translateY(1px) rotate(-0.4deg); }
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-2px) rotate(0.6deg);
+  }
+
+  100% {
+    transform: translateY(1px) rotate(-0.4deg);
+  }
 }
 
 .el--headline {
@@ -409,7 +456,7 @@ main {
 
 .el--ball {
   left: 78.8427%;
-  top: 35.2381%;
+  top: 45.2381%;
   width: 7.1854%;
   height: 5.0904%;
   transition: left var(--transition-bounce),
@@ -420,24 +467,31 @@ main {
 
 .el--ball.is-away {
   left: 91%;
-  top: 19%;
+  top: 29%;
   transform: rotate(320deg);
 }
 
 @keyframes slide-loop {
-  0%, 15% {
+
+  0%,
+  15% {
     transform: translateY(-100%) translateX(40%);
     opacity: 0;
   }
-  15%, 16% {
+
+  15%,
+  16% {
     transform: translateY(-100%) translateX(40%);
     opacity: 1;
   }
+
   60% {
     transform: translateY(78%) translateX(-22%);
     opacity: 1;
   }
-  65%, 100% {
+
+  65%,
+  100% {
     transform: translateY(85%) translateX(-25%);
     opacity: 0;
   }
@@ -1141,4 +1195,13 @@ main {
 .argument-card p a:hover,
 .faq__answer a:hover {
   color: #003a5e;
+}
+
+.el--bush-bottom-left {
+  left: 0%;
+  bottom: -5%;
+  width: 20%;
+  height: auto;
+  transform: scaleX(-1);
+  z-index: 10;
 }
