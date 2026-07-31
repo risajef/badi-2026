@@ -1,0 +1,2342 @@
+Freibad Gwaagen, Gemeinde Beringen
+Kanton Schaffhausen
+
+Erweitertes Vorprojekt
+Sanierung Bio-Schnellfilter
+Technischer Bericht
+Objekt Nr. 5285.65
+Winterthur, 07. April 2025
+
+Impressum:
+Projektname:
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+
+Teilprojekt:
+Erstelldatum:
+
+01. November 2024
+
+Letzte Änderung:
+
+07. April 2025
+
+Autor:
+
+Hunziker Betatech AG
+Pflanzschulstrasse 17
+8400 Winterthur
+
+ASC Schweiz
+Neuburgstrasse 75a
+8408 Winterthur
+
+Tel. 052 234 50 50
+E-Mail: info@hunziker-betatech.ch
+
+Tel. 076 324 79 09
+E-Mail: info@ascschweiz.org
+
+Deborah von Arx, Jan Oswald,
+Christopher Huhn, Katja Briner
+
+Matthias Frei
+
+Datei:
+
+\\hunzikerwater.ch\DFSHBT\Daten\2 Projekte\5000-\5280er\5285\5285.12 Beringen, FB, Sanierung Bio-Badi, VP\04
+Berichte\5285.12_250407_tb_eVP FB Beringen.docx
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+07. April 2025 / Seite 1
+
+Inhaltsverzeichnis
+1
+
+Zusammenfassung
+
+3
+
+2
+
+Allgemeines
+
+4
+
+2.1
+2.2
+2.3
+2.4
+
+Ausgangslage
+Projektziel
+Vorprojekt (VP)
+Abgrenzung
+
+4
+4
+4
+5
+
+3
+
+Grundlagen
+
+6
+
+3.1
+3.2
+3.3
+3.4
+
+Dokumente
+Historie der Anlage
+Geltende Normen
+Abkürzungen
+
+6
+6
+7
+8
+
+4
+
+Regulatorische Rahmenbedingungen
+
+9
+
+4.1
+4.2
+4.3
+4.4
+4.5
+4.6
+4.7
+4.8
+4.9
+4.10
+4.11
+4.12
+
+Baubewilligung
+Denkmalpflege
+Naturgefahren
+Erdbebensicherheit
+Bodenbelastung
+Baugrundverhältnisse
+Schadstoffe
+Störfallverordnung
+Betrieblicher Umweltschutz
+Arbeitnehmerschutz
+CE-Konformität
+Betriebsbewilligung Wasseraufbereitung
+
+9
+9
+9
+9
+9
+10
+10
+10
+10
+11
+11
+11
+
+5
+
+Projektbeschrieb
+
+12
+
+5.1
+5.2
+5.3
+5.4
+5.5
+5.6
+5.7
+5.8
+
+Badewassertechnik
+Bau
+Technikräume – Pumpenhaus (Bestand)
+Freibad
+Tiefbau
+Umgebungsarbeiten
+Sanitäranlagen
+Elektro
+
+12
+25
+27
+27
+30
+31
+32
+32
+
+6
+
+Kostenschätzung – erweitertes Vorprojekt
+
+33
+
+7
+
+Umweltrelevanz
+
+34
+
+7.1
+7.2
+7.3
+
+Bauphase
+Betrieb
+Nachhaltigkeit
+
+34
+34
+34
+
+Seite 2
+
+8
+
+Nutzungs- und Sicherheitsvereinbarung (NUSIV)
+
+35
+
+9
+
+Optionen
+
+36
+
+9.1
+9.2
+9.3
+9.4
+9.5
+
+Badewasser
+Bau
+Sanitär
+Umgebungsarbeiten
+Grobkostenschätzung für Optionen, +/-25 %
+
+36
+38
+39
+39
+39
+
+10
+
+Ausserhalb des Projektparameters
+
+40
+
+10.1
+10.2
+10.3
+10.4
+10.5
+10.6
+
+Behindertengerechtes Bauen
+Unfallverhütung (bfu)
+Sprungturm und Startblöcke
+Rutschbahn
+Planschbecken und Attraktionen Planschbecken
+Bau, Pumpenhaus
+
+40
+40
+41
+42
+43
+43
+
+11
+
+Weiteres Vorgehen
+
+44
+
+12
+
+Verteiler
+
+44
+
+13
+
+Beilagen und Pläne
+
+44
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+1
+
+07. April 2025 / Seite 3
+
+Zusammenfassung
+Sanierung Bioschnellfilter
+Das Freibad, erbaut im Jahr 1968, setzt seit 2014 auf biologische Wasseraufbereitung. Diese Methode
+wird von den Gästen geschätzt. Aufgrund steigender Wartungsaufwände und der Kolmatierung des
+Pflanzenfilters ist jedoch eine Anpassung der Aufbereitungstechnik erforderlich.
+Die biologische Wasseraufbereitung durch einen bewachsenen Pflanzenfilter hat sich als ineffizient erwiesen, da eine Rückspülung des Filters nicht möglich ist und der Filter zunehmend kolmatiert. Dies führt
+zu einem erhöhten Wartungsaufwand und einer sinkenden Effizienz der Wasserreinigung.
+Im Rahmen einer Vergleichsstudie (2023) zwischen konventioneller Chlor-Aufbereitung und biologischer
+Wasseraufbereitung entschied die Gemeinde (GR+EWR), ein Vorprojekt für den Einsatz von biologischen
+Schnellfiltern zu initiieren. Ziel ist es, die bestehende Technik durch ein modernes, effektiveres Filtersystem zu ersetzen, das den Wartungsaufwand reduziert und die Wasserqualität langfristig sichert.
+Die Badewassertechnik wird neu mit Schnellfiltern ausgerüstet. Das Filtermaterial, ein Kunststoffträger,
+befindet sich in fünf Filterbehältern. Diese Behälter werden anstelle des heutigen Pflanzenfilters auf einer
+betonierten Bodenplatte positioniert. Das abgebadete Wasser wird über die bestehende Überlaufrinne
+aus dem Mehrzweckbecken in den bestehenden Feinfilter geführt. Ab hier beginnt die gleichmässige
+Verteilung auf die Filter, jeweils mit Leitungen, welche im Gefälle verlegt sind. Aus den Filtern strömt
+das gereinigte Wasser über eine Tauchwand in das neue, betonierte Ausgleichsbecken. Dort wird mit
+einer neuen Ansaugleitung auf die neuen Filterpumpen, welche im Pumpenschacht aufgestellt werden,
+das filtrierte Wasser in den Vorlauf eingedüst. Um die hydraulische Kapazität der Leitungen zu erhöhen,
+wird um ca. die Hälfte des Beckens eine neue Vorlaufleitung geführt, welche an den Bestand angeschlossen wird.
+Das Becken wird mit einer neuen FPO-Folie (flexible Polyolefine-Folie) ausgekleidet, die mit der bestehenden Folie verschweisst wird, um einen nahtlosen Übergang zu gewährleisten. Die Beckenkrone sowie
+die Rinnensteine und das Holzdeck bleiben unberührt.
+Sanitär- und elektrotechnische Installationen: Diese werden an den nötigen Stellen erneuert.
+
+Optional
+Gemäss dem Kapitel 9 sind diverse Zusatzbestellungen, welche nicht direkt für eine biologische Schnellfilter gebraucht werden, aufgeführt. Die Optionen können zusätzlich bestellt werden und würden die
+betrieblichen Abläufe erleichtern oder optische Aufwertungen generieren.
+
+Nicht im Perimeter
+Das Projekt der Filtersanierung umfasst nicht die Sanierung des Planschbeckens, Attraktionen, Garderoben/Bistros sowie des Sprungturms und der Rutsche. Diese Bereiche bleiben unberücksichtigt. Erkenntnisse, welche jedoch durch die Erarbeitung des Vorprojektes entstanden, wurden am Ende des Berichtes
+in Kapitel 10 aufgeführt.
+
+Seite 4
+
+2
+
+Allgemeines
+
+2.1
+
+Ausgangslage
+Das Freibad Gwaage-Badi in Beringen wurde 2013/14 von einer konventionellen Wasseraufbereitung
+mit Chlor auf eine biologische Wasseraufbereitung mit einem Pflanzenfilter umgebaut.
+Die Umstellung wurde von den Nutzern seither geschätzt, jedoch hat sich in den letzten Jahren beim
+Betrieb der Anlage ein zunehmender Aufwand an Personalstunden ergeben. Der Pflanzensandfilter ist
+kolmatiert und kann die eingebrachten Nährstoffe nicht mehr aufnehmen, eine Möglichkeit zur Rückspülung fehlt. Der hydraulische Widerstand ist so gross geworden, dass die Umwälzung stark reduziert
+werden musste auf heutige knapp 100m3/h.
+
+2.2
+
+Projektziel
+In der Vergleichsstudie 2023 wurden grundlegende Massnahmen für die Entwicklung einer zukünftigen
+biologischen Schnellfiltervariante definiert. Diese Massnahmen sollen innerhalb des begrenzten Kostenrahmens des Vorprojekts (VP) weiter optimiert und an die Anforderungen für biologische Schnellfilter
+(Stand Norm 2023, Wissen und Erfahrung Matthias Frei, ASC Schweiz) angepasst werden. Folgende
+Leistungen und Ziele wurden in der Offerte vom Januar 2024 offeriert:
+
+2.3
+
+Vorprojekt (VP)
+ Dimensionierungen für Filter, biologische Aufbereitung, UV-Lampen, Hydraulik
+ Vordimensionierung der notwendigen Betonbauten (Ausgleichsbecken, Konstruktionen für Biofilter,
+Leitungsgräben, Anpassung an bestehender Beckengeometrie)
+ Zustandsuntersuchungen für Beton unter Folie, Kanal-TV, Geologie
+ Durchführen einer hydraulischen Simulation (Optimierung der Eindüsung)
+ Planerische Darstellung des Vorprojekts (Dispositionspläne, Prinzipschema)
+ Erstellen eines technischen Berichtes (Projektbeschrieb, Projektumfang, Massnahmenbeschrieb, Projektdefinition, Projektumfang mit Plänen) ohne Kostenermittlung
+ Aktualisierte Risikoanalyse
+ Vorabklärungen mit den verantwortlichen Institutionen, Ämtern und Behörden
+
+2.3.1
+
+Erweitertes Vorprojekt (eVP)
+ Kostenschätzung für die Filtersanierung, +/- 15 % gemäss SIA, als Grundlage für den Gesamtkredit
+ Grobkostenschätzung für optionale und nicht im Perimeter berücksichtige Massnahmen, gemäss SIA
++/- 25 %
+ Technischer Bericht als Grundlage für die Urnenabstimmung
+ Planerische Ergänzungen zum Vorprojekt
+ Baubewilligung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+2.4
+
+07. April 2025 / Seite 5
+
+Abgrenzung
+Die nachfolgende Abgrenzung erfolgte in Absprache mit der BauKo (Sitzung 01).
+Tabelle 1: Abgrenzungen gemäss BauKo-Sitzung 01.
+
+Planungsperimeter
+
+Nicht im Planungsperimeter
+
+Multifunktionsbecken
+
+Gebäude/Gebäudesubstanz: Bistro, Garderobe
+
+Verrohrung VL, RL-Multifunktionsbecken für
+neue Bio-Schnellfilter
+
+Spielplatz, Umgebung, Zaun, Liegeflächen
+
+Badewasseraufbereitung mit Bio-Schnellfilter
+
+Kinderplanschbecken inkl. Attraktionen
+
+Pumpenhaus, Feinfilter
+
+Rutschbahn, Sprungturm, Pumpenschächte
+
+Kanalisation Beckenentwässerung
+
+Kassensystem, Eingangsbereich
+
+Elektro und Sanitär für Bio-Schnellfilter
+
+Brandschutz
+Behindertengerechtes Bauen
+Gebäudeautomation
+Aussenduschen, Flächenreinigung
+Beckenumgang
+Garderoben, Bistro
+
+Bild 1: gelb markiert: Planungsperimeter des Projektes
+
+Seite 6
+
+3
+
+Grundlagen
+
+3.1
+
+Dokumente
+ Bericht Vergleichsstudie Bio-Chlor vom 12. Juli 2023, Hunziker Betatech AG
+ Begehung durch die Hunziker Betatech AG, Juni 2024
+ Bfu Begehung, Sicherheitstechnische Beratung, Bericht vom 27.9.2024
+ Vorlagen des Gemeinderates Beringen, März 2009, August 2010 und Juli 2014
+Für die Bearbeitung standen uns keine Schalungs- und Bewehrungspläne, sowie Höhenprofile zu der
+Anlage, Kanalisationsaufnahmen oder Zustandsuntersuchung der Betonbecken zur Verfügung. Diese
+Angaben wurden im Rahmen der Zustandsuntersuchungen Mitte Oktober bis Mitte November 2024
+erarbeitet.
+
+3.2
+
+Historie der Anlage
+Tabelle 2: Geschichte der Anlage.
+
+Jahr
+
+Beschreibung
+
+1968
+
+Bau der Badeanlage, chemische Aufbereitung
+
+1984
+
+Teilsanierung
+
+2009
+
+Antrag für Attraktivierung des Kinderplanschbecken mit Spielbach
+
+2010
+
+Antrag für neue Beckenauskleidung (Folie), Wechsel des Verfahrens
+
+2013
+
+Umbau der Badi auf eine Pflanzenfilteranlage
+Neue Folienauskleidung
+Neue Beckenverrohrung
+Neues Pumpenhaus
+Neues Verfahren
+
+2014
+
+Antrag Sanierung Betriebsgebäude, Garderoben, Gastro, Warmwasserduschen, Rollstuhlgängigkeit, Dachwasseranschlüsse, Elektro- und Lichtinstallationen, PV-Anlage
+
+2021
+
+Begehung mit bfu
+
+2023
+
+Vergleichsstudie Bio - Chlor
+
+2024
+
+Start Vorprojekt (vorliegender Bericht)
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+3.3
+
+07. April 2025 / Seite 7
+
+Geltende Normen
+Tabelle 3: geltende Normen
+
+Norm
+
+Herausgeber
+
+Bezeichnung
+
+Ausgabe
+
+EDI 2017:
+Verordnung
+TBDV
+
+EDI
+
+Trinkwasser sowie Wasser in öffentlich zugänglichen Bädern und Duschanlagen
+(TBDV)
+
+2024
+
+Norm 2024
+
+Schwimmteichverband
+Schweiz
+
+Norm für öffentlich zugängliche, biologisch aufbereitete Gemeinschaftsbäder Anforderungen und ergänzende Bestimmungen an Projektierung, Bau und Betrieb
+
+Version 1.12,
+März 2024
+
+2.019
+
+bfu
+
+Bäderanlagen – Leitfaden für Planung, Bau
+und Betrieb
+
+2021
+
+2.027
+
+bfu
+
+Bodenbeläge – Leitfaden für Planung, Bau
+und Unterhalt von sicheren Bodenbelägen
+
+2014
+
+SLG 301:
+12-2013
+
+Schweizer Licht Gesellschaft
+
+Richtlinien, Beleuchtung von Sportanlagen, Teil 5 – Hallen- und Freibäder
+
+2013
+
+1-15
+
+VKF
+
+Vereinigung kantonaler Feuerversicherungen, Brandschutznorm
+
+2015
+
+SIA, electrosuisse,
+SVGW, suissetec, VSA
+
+Branchenspezifische Normen für Haustechnikanlagen und Liegenschaftsentwässerung.
+
+Seite 8
+
+3.4
+
+Abkürzungen
+Tabelle 4: Übersicht der Abkürzungen
+
+Abkürzung
+
+Beschreibung
+
+SIA
+
+Schweizerischer Ingenieur- und Architektenverein
+
+IKL
+
+Interkantonales Labor Schaffhausen
+
+bfu
+
+Beratungsstelle für Unfallverhütung, Bern
+
+EG, UG
+
+Erdgeschoss, Untergeschoss
+
+MuKEn
+
+Mustervorschriften der Kantone im Energiebereich
+
+SIA
+
+Schweizerischer Ingenieur- und Architektenverein
+
+SWKI
+
+Schweizerischer Verein von Gebäudetechnik-Ingenieuren
+
+UV
+
+Unterverteilung
+
+SGK
+
+Schaltgerätekombination
+
+VSA
+
+Verband Schweizer Abwasser- und Gewässerschutzfachleute
+
+R+I
+
+Rohrleitungs- und Instrumentenflussschema
+
+BauKo, BH
+
+Baukomission, Bauherrschaft
+
+VL/RL
+
+Vorlauf, Rücklauf
+
+TBDV
+
+Verordnung über Trinkwasser sowie Wasser in öffentlich zugänglichen Bädern und
+Duschanlagen
+
+CNS
+
+Chromstahl
+
+FU
+
+Frequenzumformer
+
+VP, eVP, BP
+
+Vorprojekt, erweitertes Vorprojekt, Bauprojekt
+
+AGB
+
+Ausgleichsbecken
+
+BWA
+
+Badewasseraufbereitung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+07. April 2025 / Seite 9
+
+4
+
+Regulatorische Rahmenbedingungen
+
+4.1
+
+Baubewilligung
+Durch die baulichen Veränderungen im technischen Bereich wird eine Baueingabe- bzw. Baubewilligung
+für das Projekt benötigt. Es wird davon ausgegangen, dass die Massnahmen von der Gemeinde Beringen
+bewilligt werden.
+
+4.2
+
+Denkmalpflege
+Das Freibad untersteht keinem denkmalpflegerischen Schutz. Es müssen keine diesbezüglichen Auflagen
+berücksichtigt werden.
+
+4.3
+
+Naturgefahren
+Gemäss Nachforschungen im geografischen Informationssystem des Kantons Schafhausen (GIS-SH),
+liegt die Grünfläche östlich des Lieblosentalbachs im Hochwasserbereich mit einer mittleren Gefährdung.
+
+4.4
+
+Erdbebensicherheit
+Die Badi steht in der am wenigsten gefährdeten Erdbebenzone Z1a. Es werden keine speziellen Massnahmen vorgesehen. Die neuen Bauarbeiten und technischen Massnahmen erfolgen nach dem neusten
+Stand der Technik.
+
+4.5
+
+Bodenbelastung
+Das Areal des Freibades Gwaagen weist keinen Eintrag im Kataster der belasteten Standorte (KbS) oder
+im GIS Kataster des Kantons Schaffhausen auf.
+Die Mischproben der Bodenuntersuchung vom 10. Oktober 2024 (Zustandsuntersuchung) haben keine
+Auffälligkeiten ergeben.
+
+Bild 2: Untersuchungssituation 10.10.2024, Dr.
+von Moss AG
+
+Bild 3: Legende
+
+Seite 10
+
+4.6
+
+Baugrundverhältnisse
+Aus jetziger Sicht sind keine weiteren Abklärungen nötig, da sich die neue Technik auf dem bestehenden
+Grundriss befindet. Einzig die neuen Filterbecken werden ca. 1.5m tief in den Boden versenkt.
+
+4.7
+
+Schadstoffe
+Die Schadstoffuntersuchung des Beckenanstriches haben keine Asbestbeanstandungen ergeben. Eine
+Belastungsprobe auf PCB (Polychlorierte Biphenyle) wurde noch nicht durchgeführt. Diese Beprobung
+kann vor Baustart nachgeholt werden. Es werden keine Kosten für eine Schadstoffsanierung eingeplant
+(BauKo 05, 29.10.2024). Nach Stand Vorprojekt und Abklärungen mit ausführenden Unternehmern,
+kann das eingelegte Vlies unterhalb der Schwimmbadfolie bleiben und wird nur lokal bei Bedarf ersetzt.
+So bleibt der vorhandene Beckenanstrich, geschützt durch das Vlies, bestehend.
+
+4.8
+
+Störfallverordnung
+Es gibt seitens Badewassertechnik keine kritischen Stoffe, welche vor Ort gelagert werden. Daher muss
+die Störfallverordnung nicht berücksichtigt werden.
+
+4.9
+
+Betrieblicher Umweltschutz
+Chemikalienumschlag und -lagerung
+In der biologischen Aufbereitung werden keine Chemikalien benötigt. Die Glukoselösung für die Nährstoffregulation der Biofilter stehen in 25l Bidon und zusätzlich in Auffangwannen.
+Abwasserentsorgung
+Gemäss telefonischer Rücksprache mit Herrn Bombardi, Interkantonales Labor (IKL), vom 3. Juli 2024:
+ Die Filterrückspülung kann, sofern über einen Schlammsammler sedimentiert, in den Bach eingeleitet
+werden. Es ist im Projekt vorgesehen, dass die Filterrückspülung direkt in die Kanalisation eingeleitet
+wird. Die Filterrückspülungen werden alle 5-10 Wochen ausgeführt und es werden ca. 5m3 eingeleitet.
+ Die Beckenentleerung im Frühling kann, ohne Chemikalienzusätze, gedrosselt in den Bach geleitet
+werden. Entleerung (Teilentleerung) der Becken in den Vorfluter: Die Menge des Badewassers, welches über Bodenabläufe dem Meteorwassersystem und somit dem Vorfluter (Bach) zugeführt wird,
+darf 50 % der jeweiligen Wasserführung des Bachs nicht übersteigen und hat den Einleitbedingungen der Gewässerschutzverordnung Anhang 3.1 und 3.2 Ziff. 2 zu entsprechen.
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+4.10
+
+07. April 2025 / Seite 11
+
+Arbeitnehmerschutz
+Bei den neu zu erstellenden Funktionsbecken und Biofiltern wird auf einen einfachen und sicheren Zugang geachtet.
+
+4.11
+
+CE1-Konformität
+Für die neuen Anlagen wie den Pumpen werden vom Lieferanten Einbauerklärungen verlangt. Für das
+Freibad als Ganzes wird keine CE-Konformitätserklärung erstellt.
+
+4.12
+
+Betriebsbewilligung Wasseraufbereitung
+Im Kanton Schaffhausen ist keine Bewilligung für die Wasseraufbereitung nötig. Das Projekt wird nach
+der gültigen Verordnung über Trink-, Bade- und Duschwasser (TBDV) und der Norm für biologisch aufbereitete Gemeinschaftsbäder (Entwurf 2023) geplant. Abweichungen sind in der Nutzungsvereinbarung aufgeführt.
+
+1
+
+Die CE-Kennzeichnung garantiert, dass die gekennzeichneten Produkte in der EU (bzw. dem EWR) ohne Einschränkung gehandelt werden
+können und gewährleistet dem Konsumenten innerhalb dieses Raumes einheitlichen Schutz in Gesundheits-, Sicherheits- und Umweltbelangen. Quelle: SECO
+
+Seite 12
+
+5
+
+Projektbeschrieb
+Der nachfolgende Teil beschreibt die Massnahmen, welche im Rahmen des Vorprojektes ab Juni 2024
+bis November 2024 zusammen mit der BauKo erarbeitet wurden.
+
+5.1
+
+Badewassertechnik
+Die geforderte Wasserqualität für öffentliche, biologisch aufbereitete Bäder ist geregelt in nachfolgender
+Verordnung:
+ EDI 2017: Verordnung über Trinkwasser sowie Wasser in öffentlich zugänglichen Bädern und Duschanlagen (TBDV)
+Daraus resultieren Anforderungen an die Wasserqualität:
+ Mikrobiologische Anforderungen (Hygiene)
+ Chemische Anforderungen (Nährstoffgehalt, Phosphor)
+ Physikalische Anforderungen (Trübung, Temperatur, etc.)
+Weiterreichende Anforderungen an ein öffentliches, biologisch aufbereitetes Bad und die entsprechenden Verfahrenskombinationen sind unter nachfolgender Norm geregelt:
+ Norm für öffentlich zugängliche, biologisch aufbereitete Gemeinschaftsbäder - Anforderungen und
+ergänzende Bestimmungen an Projektierung, Bau und Betrieb - Herausgeber Schwimmteichverband
+Schweiz, Version 1.12, März 2024
+Daraus resultieren Anforderungen an:
+ Wasseraufbereitungsverfahren und deren Dimensionierung
+ Beckenhydraulik und Wasserumwälzung
+ Nährstoffentfernung und Keimelimination
+ Betriebsparameter und Nährstoffmanagement
+Definition Wasserqualität
+Das per Definition oligotrophe Gewässer ist sehr nährstoffarm und weist eine geringe organische Produktion im Wasser auf. Die entsprechenden Austragswege von Phosphor über Biofilter begrenzen das
+Algenwachstum, Trübungen und die Belagsbildung. Leicht rutschige und sichtbare Biofilmbeläge auf
+Oberflächen sind weiterhin zu erwarten. Das Wasser ist im Normalfall sehr klar, die Sichttiefe ist in der
+Regel grösser als 6 m. Das Wasser erscheint visuell blau (je nach Untergrund abweichend). Um diesen
+nährstoffarmen Gewässerzustand langfristig zu erreichen ist eine entsprechend effiziente Wasseraufbereitungskette zu planen, die den Einträgen entgegenwirken kann.
+Vereinfachter Kreislaufbeschrieb
+Das Badewasser von den Nutzungsbereichen wird über die bestehenden Überlaufrinnen abgeführt. Das
+Wasser gelangt über die bestehenden Leitungen in das Feinfilterbecken (abgeändertes Filtersack-Becken). Hier kann Schwallwasser kurzfristig gepuffert und beruhigt werden, bevor es in die 5 parallel
+betriebenen Biofilter verteilt wird.
+Die Biofilter entfernen Nährstoffe und Feinpartikel aus dem Wasser. Durch gezielte, automatisierte Zudosierung von Glucose (Zuckerlösung) wird die mikrobielle Fauna gefördert und die biologische Leistung
+der Filter (Phosphorentfernung) erhöht.
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+07. April 2025 / Seite 13
+
+Eine Reinigung der Biofilter per Rückspülung erfolgt pro Filter je nach Belastung ca. alle 5-10 Wochen,
+bzw. wird maximal einer der 5 Filter pro Woche durch den technischen Dienst (Werkhof) rückgespült.
+Dazu muss der zu rückspülende Biofilter vom System abgekoppelt und mit Luft verwirbelt und rückgespült werden (Aufwand ca. 1h). Pro Rückspülung ist mit einem Wasserverbrauch von 5 m3 zu rechnen.
+Dieser Verlust kann über das gespeicherte Wasservolumen im Ausgleichsbecken ausgeglichen werden.
+Das mit Nährstoffen angereicherte Rückspülwasser wird in die Kanalisation geleitet.
+Ein irreversibles Kolmatieren der Filterschichten, wie beim heutigen Pflanzensandfilter, ist nicht mehr zu
+befürchten. Auch komplett kolmatierte Biofilter können mit einem Spülgang zurückgesetzt werden. Optional ist eine vollständige Automatisierung der Vorgänge möglich. Nach der Rückspülung wird der jeweilige Biofilter intern betrieben, damit übergebliebene Biomasse als Starterkultur sich wieder im Filterbett einlagern kann (erwünscht), erst danach wird der Biofilter wieder in das Gesamtsystem eingebunden.
+Am Ende der Biofilter gelangt das Wasser in eine Steigkammer und wird an UV-Lampen vorbeigeführt.
+Die Bestrahlung mit UV-Licht bietet eine effiziente, lokale Elimination von unerwünschten Mikroorganismen sowie Schwebealgen (nur bei Bedarf betrieben).
+Anschliessend gelangt das Wasser in das Ausgleichsbecken. Mit dem Wasservolumen des Ausgleichsbeckens können Wasserschwankungen des Nutzungsbereichs aufgenommen werden (Badegast-Wasserverdrängung, Verdunstung, Regenwasser), sorgt für ein immer volles Badebecken mit gleichem Wasserniveau und verhindert ungewollte Wasserverluste. Wird ein minimaler Wasserstand im Ausgleichsbehälter erreicht, wird automatisiert Frischwasser nachgespiesen. Wird der maximale Wasserstand im Ausgleichsbecken überschritten, z.B. bei einem stärkeren oder längeren Regenereignis, gelangt das überschüssige Wasser per Überlauf in das Biotop/Retention. Dieses Wasser ist nicht chemisch oder mikrobiologisch belastet und kann daher ohne Bedenken in die Natur zurückgeführt werden.
+Vom Ausgleichsbecken wird das Wasser von den Pumpen angesaugt und über Druckleitungen und Düsen in die Nutzungsbereiche zurückgeführt. Im Vergleich zum heutigen Bestand ist die Umwälzung ca.
+4x höher angesetzt. Dies führt zu einem schnelleren Abführen von den eingebrachten Feinstoffen und
+Nährstoffen aus dem Nutzungsbereich, hin zu der Wasseraufbereitungsanlage.
+
+5.1.1
+
+Belegung
+Durch Badegäste, das Umland und Nachfüllwasser eingetragene Nährstoffe müssen dem Wasser in der
+Bilanz wieder entzogen werden, damit das Wasser langfristig nährstoffarm bleibt und nicht per Zwangsnachspeisung ausgetauscht werden muss. Die biologische Wasseraufbereitung ist auf die Spitzenwoche
+auszulegen (Tabelle 5).
+Tabelle 5 entsprechend wichtig ist die für die Konzeption zugrunde liegende Badegastanzahl. Es wird
+für die Zukunft insgesamt von einer leicht höheren gesamten Badegastanzahl (Soll) für das Freibad ausgegangen.
+Tabelle 5: Aktuelle Belegung gemäss Datenblatt und geplante Belegung Naturbad Beringen
+
+Parameter
+
+Einheit
+
+Gesamtbadegastanzahl Saison
+
+Ist
+
+Soll
+
+Bemerkung
+
+16’875
+
+26’000
+
+Bg/d
+
+135
+
+208
+
+Durchschnittswert Saison
+
+Durchschnittliche Badegastanzahl Spitzenwoche (Ausgangswert)
+
+Bg/d
+
+380
+
+585
+
+Standard: 2.25% des Saisontotals
+
+Badegastanzahl Spitzentag
+
+Bg/d
+
+717
+
+1105
+
+Standard: 4.25% des Saisontotals
+
+Durchschnittliche
+zahl Saison
+
+Badegastan-
+
+Definierter Wert
+
+Seite 14
+
+Zur Überprüfung der geplanten Belegung wurden die Eintrittszahlen von der Saison 2019 sowie 20212024 ausgewertet. Die Erfassung der Besucherzahlen erfolgte teils manuell durch das Kassenpersonal
+und teils automatisiert über eine elektronische Zugangsschranke. Diese Methoden bergen potenzielle
+Fehlerquellen, die bei der Analyse interpretiert werden müssen. Es wird davon ausgegangen, dass die
+automatisiert gezählten Eintrittszahlen eher höher sind als die Effektiven, da jegliche Personen, auch
+Restaurantgäste und Besucher, erfasst werden.
+Die geplante Saisonsumme ist höher angesetzt als die zu erwartenden Badegastanzahl (Bild 4). In der
+Saison 2022 war die Belegung jedoch nur 4 % tiefer, in den übrigen Jahren zwischen 32 – 61 % tiefer
+als die maximal mögliche Gesamtbelegung. 2022 ging als das wärmste und sonnenreichste Jahr seit
+Messbeginn 1864 in die Geschichte ein (Bafu, Bundesamt für Umwelt, 2023). Während die Durchschnittstemperatur der Jahre 1991 bis 2020 bei 5.8 Grad lag, kletterte sie 2022 auf 7.4 Grad. Ohne
+grössere demographische Änderungen in der Gemeindeumgebung, kann also davon ausgegangen werden, dass das Jahr 2022 die Spitze des zu erwartenden Nutzungsaufkommens in der Badi darstellt.
+Die durchschnittliche tägliche Badegastanzahl in der Spitzenwoche (Bild 6), wurde ausschliesslich in der
+Saison 2022 und nur in einer Woche überschritten. Total wurden 75 Wochen überprüft. In einer Woche
+wurden an 2 Tagen in Folge der Spitzentageswert überschritten (Bild 7). Die Überschreitungen fanden
+an den Tagen des in Beringen durchgeführten Kantonalturnfest statt (2022) und stellen statistisch Ausreisser dar. Aufgrund der Überprüfungen kann mit den definierten Werten kalkuliert werden (Entscheid
+Bauko 03, 20.8.2024) (Tabelle 5).
+
+Badegäste [Bg/a]
+
+30000
+25000
+
+26000
+
+25’030
+17’753
+
+20000
+15000
+
+10’744
+
+12’623
+
+10’107
+
+10000
+5000
+0
+2019
+
+2021
+
+2022
+
+2023
+
+2024
+
+Saison
+Besucher Saisonsummen
+
+Besucher Saisonsummen
+
+Bild 4: Saisonsumme der Belegung in den letzten Jahren im Vergleich mit der geplanten Belegung (rot).
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+07. April 2025 / Seite 15
+
+1600
+
+Badegäste [Bg/d]
+
+1400
+1200
+
+1105
+
+1000
+800
+600
+400
+200
+7.1.19
+7.17.19
+8.2.19
+8.18.19
+9.3.19
+5.16.15
+6.1.21
+6.17.12
+7.3.21
+7.19.21
+8.4.21
+8.20.21
+9.5.21
+5.18.22
+6.3.22
+6.19.22
+7.5.22
+7.21.22
+8.6.22
+8.22.22
+5.8.23
+5.24.23
+6.9.23
+6.25.23
+7.11.23
+7.27.23
+8.12.23
+8.28.23
+5.16.24
+6.1.24
+6.17.24
+7.3.24
+7.19.24
+
+0
+
+Besucherzahl Soll Max
+
+Besucherzahl
+
+Bild 5: Tägliche Belegung in den letzten Jahren (504 Tage) im Vergleich mit der geplanten Spitzenbelastung (rot).
+700
+
+Badegäste [Bg/d]
+
+600
+
+585
+
+500
+400
+300
+200
+100
+0
+Wochen
+Badegastanzahl IST [PersonenMittel/Woche]
+
+Besucherzahl Soll Woche
+
+Bild 6: Durchschnittliche Belegung pro Woche (75 Wochen-Mittelwerte).
+
+Bild 7: Boxplot der täglichen Besucherzahlen in den letzten Jahren (total 504 Tage) und Boxplot der
+durchschnittlichen Belegung pro Woche (75 Wochen-Mittelwerte) (r.).
+
+Seite 16
+
+Tabelle 6 Überprüfung des Phosphorgehalts im Frischwasser (einmalige Messungen vom 21.07.2021)
+
+Parameter
+
+Einheit
+
+Saison Total
+
+Bemerkung / Annahmen
+
+Phosphorgehalt Zulauf zu Filter
+
+µgP/l
+
+9
+
+Messung vom 21.07.2021
+
+Tabelle 7: Kalkulation der Nährstoffbelastung aufgrund den Belastungswerten im Freibad Beringen
+
+Parameter
+
+Einheit
+
+Wert
+
+Phosphoreintrag pro Badegast
+
+mg/Bg
+
+20
+
+Geplante tägliche Badegastanzahl
+Spitzenwoche
+
+BG/d
+
+585
+
+Phosphoreintrag
+
+mg/d
+
+11’700
+
+Phosphoreintrag pro m2 Wasseroberfläche
+
+mg/m2
+
+0.5
+
+Beckenwasserfläche
+
+m2
+
+1’166
+
+Phosphoreintrag
+
+mg/d
+
+582.9
+
+Geschätzter max. täglicher Wasserverbrauch
+
+m3/d
+
+23.3
+
+Phosphorgehalt Füllwasser
+
+mg/m3 (=µg/l)
+
+20
+
+Phosphoreintrag
+
+mg/d
+
+466.3
+
+Phosphoreintrag total
+
+mg/d
+
+12’749
+
+Bemerkung / Annahmen
+
+Badebasteinträge
+
+Luftdeposition
+
+Nachfüllwasser
+
+5.1.2
+
+Nährstoffausträge, Dimensionierung Biofilter
+In der Bilanz ist es entscheidend, dass alle durch Badegäste und andere Eintragsquellen eingebrachten
+Nährstoffe und Verunreinigungen effizient aus dem System entfernt werden. Dies ist notwendig, um
+Eutrophierung zu verhindern und die mikrobiologischen Standards langfristig aufrechtzuerhalten.
+Tabelle 8: Nährstoffbelastung und Filterleistung (Nährstoffentfernung)
+
+Parameter
+
+Einheit
+
+Wert
+
+Phosphoreintrag Total
+
+mg/d
+
+12’749
+
+Phosphorentzugsleistung Biofilter
+
+mg/m3*d
+
+178.6
+
+Volumen Filtermaterial Soll
+
+m3
+
+71.4
+
+Volumen Filtermedium IST (Alle Filter)
+
+m3
+
+76.5
+
+Volumen Filtermedium Reserve
+
+m3
+
+5.2
+
+Phosphorentzugsleistung Biofilter
+
+mg/d
+
+13’670
+
+Phosphorbilanz
+
+mg/d
+
+921.5
+
+Bemerkung / Annahmen
+
+(Reserve)
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+5.1.3
+
+07. April 2025 / Seite 17
+
+Biofilter Bauwerk Dimensionen
+Das Filtervolumen wird mit 5 parallel betriebenen Biofiltern mit je 15.3 m3 Filtermedium bereitgestellt.
+Ein einzelner Biofilter hat eine Grundfläche von (lxb) 7.5m x 2.4m und eine Höhe von 2 m. Diese werden
+aus PP (Polypropylen) oder PE (Polyethylen) gefertigt.
+ Flächenbedarf bei Biofilter 5 Stk. parallel aufgestellt (ohne Anschlüsse stirnseitig):
+- Grobes Aussenmass pro Biofilter (lxbxh) 7.5 m x 2.4 m x 2.0 m.
+- Gesamtfläche 5 Stk. Biofilter inkl Zwischenraum und Anschlüsse: (lxbxh) 12.8 m x 12.8 m
+ Die Biofilter können freistehend aneinander auf eine Bodenplatte aufgestellt und hinterfüllt werden.
+ Mit einer Folie abgedeckt, «on-Top» begehbar und mit Lichtschachtgitter o.ä. abgedeckt, (optional)
+ Die Biofilterleistung ist auf die Spitzenwoche auszulegen. Bei 585 Bg/d und einer spezifischen Biofilter-Leistung von 178.6 mg/m3 (Wert für geplantes Medium mit Nährstoffmanagement gem. Tests im
+Labor und Biberstein) ergibt das ein Soll von 71.4 m3 Biofilter Volumen. Eine nachträgliche Aufstockung des Filtermediums wäre bis auf 90 m3 möglich.
+ Jeder Biofilter wird im Vollbetrieb mit 101.2 m3/h Volumenstrom beschickt, dies ergibt auf die Filterfläche von 11 m2 eine Beschickungsgeschwindigkeit von rund 9 m/h und eine Aufenthaltszeit im
+Filtermedium von ca. 10 Minuten.
+
+Bild 8: biologischer Schnellfilter, ASC
+
+Bild 9: Referenz Biofilter Biberstein, HBT
+
+Bild 10: biologischer Schnellfilter, Planstand Januar 25
+
+Bild 11 Abdeckung mit Sicherheitsplane
+
+Seite 18
+
+12
+
+12
+
+Dosie rpumpe
+
+Dosierpumpe
+
+12
+Vorfiltergitter
+
+Zulauf
+12
+Motorventil
+
+Filtermedium
+
+Ausgleichsbecken
+
+12
+TP
+12
+Motorventil
+
+12
+Manuell
+
+Kanalisation
+
+Gebläse
+
+12
+Motorventil
+
+Bild 12: Einzelschema eines biologischen Schnellfilters, ASC
+
+Massnahmen
+
+Bemerkung
+
+Fünf Biofilter
+Verrohrung Filter intern sowie ab dem Feinfilter
+Anschluss an Kanalisation
+Anschluss an Biotop / Retentionsbecken
+
+5.1.4
+
+Feinfilter, Bestand
+Das bestehende Feinfilterbetonbecken mit der Rücklaufleitung aus dem Becken kann grösstenteils weiterverwendet werden. Die Entleerung des Feinfilters erfolgt via Bestandsleitungen/Ablauf. Der Zugang
+mit Leiter ist gemäss Rückmeldung Betrieb ausreichend und wird nicht optimiert.
+Massnahmen
+Feinfilter adaptieren
+
+Bemerkung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+5.1.5
+
+07. April 2025 / Seite 19
+
+Ausgleichsbecken (AGB)
+Das Ausgleichsbecken wird gebraucht, um das anfallende Schwallwasser der Badegäste aufzunehmen.
+Im Falle des Biofilters wird das AGB nach den Filtern installiert und im freien Gefälle mit dem Filtrat aus
+den Bioschnellfilter bedient.
+Tabelle 9: Kalkulation des Ausgleichsbeckenvolumens, ASC
+
+Berechnung
+
+Einheit
+
+Soll
+
+Personen gleichzeitig
+
+Bg
+
+301
+
+Wasservolumen pro Person (0,075 m3)
+
+m
+
+3
+
+0.075
+
+Wasservolumen für def. Badegastanzahl
+
+m3
+
+22.6
+
+Empirischer Faktor für Wellenaustrag (0,052 m)
+
+m
+
+0.052
+
+Volumenstrom
+
+3
+
+m /h
+
+506
+
+Wasserfläche des Beckens
+
+m2
+
+1166
+
+Länge der Überlaufkante
+
+m
+
+111
+
+Schwallwasservolumen (Wellenschlag)
+
+m3
+3
+
+15
+10.0
+
+Rückspülung Biofilter
+
+m
+
+Nutzvolumen (Minimalanforderung)
+
+m3
+
+47
+
+Zu retardierende Regen-/Verdunstungshöhe
+(Standard 0.05m)
+
+m
+
+0.05
+
+Ausgleich Verdunstungsvolumen
+
+m3
+
+58.3
+
+3
+
+105
+
+Ausgleichsvolumen SOLL
+
+m
+
+Ein auf 105 m3 dimensioniertes Ausgleichsbecken ist sehr gross und würde zu entsprechend hohen Baukosten führen. Die SIA für konventionelle Bäder sieht für das Mehrzweckbecken folgenden Ausgleichsbecken vor:
+Tabelle 10: Kalkulation des Ausgleichsbeckenvolumens nach SIA 385/9, HBT
+
+Berechnung
+
+Einheit
+
+Soll
+
+Nutzvolumen Schwimmer
+
+m3
+
+27
+
+Nutzvolumen Springer
+
+m
+
+3
+
+7
+
+Nutzvolumen Nichtschwimmer
+
+m3
+
+19
+
+3
+
+Nutzvolumen Plantschbecken (50% Nachtablass
+für Reinigung)
+
+m
+
+Schwallwasser Ausgleichsvolumen
+
+m3
+
+57
+
+3
+
+24
+
+Regenwasseranfall (10 Min. Starkregen)
+
+4
+
+m
+
+Ein Ausgleichsbecken mit einem Volumen von 66 m3 ist für den Betrieb ausreichend. Der Not-/Regenwasserüberlauf des Ausgleichsbeckens führt in ein neues Biotop.
+Die Nachspeisung des verdunsteten und des durch die Badegäste ausgetragenen Badewassers erfolgt
+über eine automatische Niveausteuerung im Ausgleichsbecken. Die Netztrennung mit Frischwasser wird
+neu TBDV konform ausgeführt. Für die periodische Reinigung ist der Zugang in das Ausgleichsbecken
+gegeben.
+
+Seite 20
+
+Massnahmen
+
+Bemerkung
+
+Neues Ausgleichsbecken von 66 m3
+Netzwassernachspeisung, nach TBDV
+Belüftungsplatte (bei zu starker Sauerstoffzerrung)
+Abdeckung mit Kunststoffplane, Sicherheitszertifiziert
+
+5.1.6
+
+Hydraulisches System
+Die Vor- und Rücklaufleitungen sind aus PE, welche im Normalfall wenig anfällig für Defekte sind und
+mind. 50 Jahre im Boden bleiben können. Die Leitungen wurden im Jahr 2013 ersetzt.
+Zustandsuntersuchung Beckenverrohrung
+Die Zustandsuntersuchung hat ergeben, dass alle Stränge der Druckleitungen Vorlauf konstant Wasser
+verlieren. Die drucklosen Rücklaufleitungen sind gemäss der Untersuchung zu ca. 98 % dicht, der Strang
+auf der langen Beckenseite Schwimmer konnte nie komplett gefüllt werden, das Wasser lief direkt aus
+den Leitungen in den Untergrund. Entscheid BauKo07: Ein Wasserverlust wird im Projekt akzeptiert, die
+Kosten für einen kompletten Leitungsersatz werden unter den Optionen aufgeführt.
+Rinne und Rücklaufleitung
+Das Multifunktionsbecken verfügt über keine allseitige Überlaufrinne, sondern Rinnenstücke, ausgeführt
+in Chromstahl (CNS) von je ca. 2.5 m Länge mit je 2x DN 100 Abläufen. 100 % der Umwälzung erfolgt
+über dieses Rinnensystem, es gibt keine Bodenansaugstellen. Teilweise ist die Rinne durch einen Holzrost
+nicht zugänglich, auch nicht für die Reinigung. Die Rücklaufleitung ist mit DN 315 genügend gross dimensioniert, um das Schwallwasser aufnehmen zu können, der Betrieb meldet keine grösseren Wasseransammlungen ausserhalb der Rinne im Beckenumgang. Die vorhandenen Rinnenabläufe sind für ein
+biologisch aufbereitetes Becken ausreichend dimensioniert und positioniert.
+
+Bild 13: offen zugängliche Rinne
+
+Bild 14: Rinne unter dem Holzrost, nicht zugänglich
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+07. April 2025 / Seite 21
+
+Bild 15: Planausschnitt Strang 3
+
+Massnahmen
+
+Bemerkung
+
+Keine Massnahmen in der Rücklaufleitungen,
+Strang Nr. 3 westliche Beckenseite undicht.
+
+Siehe Kurzbericht (RH), Mail NR vom Dezember
+2024
+
+Morsche Holzroste Beckenumgang, Statik
+
+Betrieblicher Unterhalt 2024/25
+
+Düsen und Vorlauf
+Die Position der seitlichen Einlaufdüsen ist gleichmässig um das Becken verteilt und entspricht einer
+horizontalen Beckendurchströmung. Gemäss Betrieb sind keine Ablagerungen im Becken sichtbar, die
+auf eine unzureichende Eindüsung schliessen liesse. Die Lage der Düsen ist einlagig und zwischen ca.
+1.2 – 2 m tief im Becken gesetzt und sind für ein biologisch aufbereitetes Becken ausreichend, wenn
+auch eher zu tief im Becken positioniert.
+Um einen breiten, möglichst langsamen Vorlauf bei den Düsen zu generieren, werden neue Düseneinsätze auf die bestehenden DN 50 Bohrungen am Becken geplant. Aktuell verfügt jede Düse im Beckenumgang über einen Schieber (einbetoniert), diese sollen zukünftig stillgelegt werden.
+Die undichten Vorlaufleitungen werden gemäss Entscheid BauKo vom 17.12.2024 als optionale Kosten
+und für den kompletten Ersatz ausgeschrieben. Aktuell wird im Projekt ein gewisser Wasserverlust akzeptiert. Dieser wird geringer ausfallen als bei der Druckprüfung im November 2024, da der Betriebsdruck deutlich unter den 2 bar liegt, welche getestet wurden.
+
+Bild 16: Handschieber für Drosselung der Düsen
+
+Bild 17: Eindüsung ins Becken
+
+Seite 22
+
+Bild 18: Eine Lage Düsen Sprungturm
+
+Bild 19: Eine Lage Düsen Schwimmer
+
+Tabelle 11: Maximale Volumenströme und Umwälzraten
+
+Volumen
+
+Einheit
+3
+
+1
+
+Ist
+
+Soll
+
+120
+
+450
+
+Volumenstrom Q
+
+m h-
+
+Umwälzzeit
+
+h
+
+17.1
+
+4.1
+
+Umwälzrate
+
+n/d
+
+1.4
+
+5.9
+
+Bemerkung
+
+Bestandsleitungen werden im Boden belassen und nicht entfernt.
+
+Bild 20: neue Eindüsung an der bestehenden Ringleitung, rot = neue Leitungsführung
+
+Massnahmen
+Neue Leitungsführung ab Biofilter bis zum Anschluss am Bestandsvorlauf/Ringleitung
+36 Stk. neue Düsenköpfe
+Stilllegen der Handschieber
+
+Bemerkung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+5.1.7
+
+07. April 2025 / Seite 23
+
+Nachweis Einströmung mit CFD (computational fluid dynamics)
+Für einen Teil des Beckens wurden CFD-Simulationen durchgeführt, um die Fliessgeschwindigkeiten und
+die Durchmischung im Becken zu untersuchen. Der separate Bericht liegt als Anhang bei. Dabei wurden
+verschieden grosse Düsenöffnungen und verschiedene Volumenströme verglichen. Mit dem geplanten
+Volumenstrom von 450 m3/h zeigte sich dabei eine angemessene Durchmischung des Beckens (Bild 21).
+Die Fliessgeschwindigkeit beträgt dennoch, nur in kleinen Bereichen, über 10 cm/s. Es wurden keine
+hydraulischen Kurzschlüsse oder Bereiche festgestellt, in denen das Wasser nicht ausgetauscht wird. Mit
+einer Ausrichtung der Düsen um 10°-15° zur Wasseroberfläche hin, kann die Anströmung des Beckenbodens verringert werden. Details sind im beigelegten Bericht (Naturbad Beringen, Hydraulische Analyse
+(CFD), Einströmung und Durchmischung) zusammengestellt.
+
+Bild 21: Fliessgeschwindigkeiten gemäss CFD-Simulation eines ausgewählten Beckenbereichs, im Schnitt
+auf Höhe der Düsen. Oben links: V1, Düsen DN50, 450 m3/s. Oben rechts: V2, Düsen DN50, 100 m3/h.
+Unten links: V4, Düsen DN50, 450m3/s, 15° nach oben gerichtet. Unten rechts: V3, Düsen DN25, 100 m3/h.
+
+5.1.8
+
+Aggregate und Armaturen
+Für den Wasser-Kreislauf werden zwei neue Filterpumpen für das Multifunktionsbecken benötigt (neuer,
+grösserer Volumenstrom und Resilienz). Die bestehende Planschbecken-Pumpe wird revidiert (und optional neu ausgeschrieben). Für die Rückspülung der Filter wird ein Gebläse benötigt. Dieses kann im
+Pumpenhaus Platz finden.
+Massnahmen
+Zwei neue Filterpumpen
+Revision bestehende Planschbecken-Pumpe (Optional einmal neu)
+Klappen und Armaturen
+Rückspülgebläse
+
+Bemerkung
+
+Seite 24
+
+5.1.9
+
+Beckenreinigung
+Die Reinigung wird wie bisher verlaufen. Der Bereich der Sprungbucht mit 3.5 m und dem steilen Abfall
+vom Schwimmer zum Sprung wird weiterhin kritisch bleiben. In diesem Bereich wird auch zukünftig
+durch die reduzierte Reinigung ein verstärkter Algenwuchs vorkommen. Ein neuer Reinigungsroboter ist
+nicht Teil der Projektkosten, beide bestehenden Reinigungsroboter werden weiterverwendet und sind
+ausreichend. Es kann angenommen werden, dass sich der Reinigungsaufwand mit der neuen Umwälzung reduzieren wird.
+
+Bild 22: GIS SH, Luftbild 2022
+
+5.1.10
+
+Beckenentleerung und Beckenfüllung
+Gemäss den Abklärungen mit dem Interkantonalen Labor kann das Beckenwasser im Frühling gedrosselt
+in den Vorfluter (Bach) entleert werden. Dauer: Ca. 2-3 Tage.
+Beckenfüllung wie bisher über den Hydranten und Feuerwehrschlauch. Dauer: ca. 2-3 Tage.
+Massnahmen
+
+Bemerkung
+
+Entleerung und Befüllung wie bisher
+
+Bestand
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+5.1.11
+
+07. April 2025 / Seite 25
+
+Steuerung, Mess- und Regeltechnik
+Ein neuer Schaltschrank wird für die Steuerung der Pumpen, elektrischen Klappen sowie Niveausensoren
+der Becken vorgesehen. Auch eine einfache Übersicht mit einem farbigen Touch-Panel wird geplant. Die
+Steuerung der Badewassertechnik beinhaltet neben dem Normalbetrieb auch einen Spar- und Nachtbetrieb der Pumpen, welcher über den Frequenzumformer (FU) geregelt wird und sich Tages- und Zeitabhängig einstellen lässt.
+Alarmierung aktuell
+Heute ist keine Alarmierung auf Natel oder Laptop vorhanden. Bei Problemen muss der Werkhof vor Ort
+anhand des Schaltschrankes die Lokalisierung vornehmen.
+Massnahmen
+
+Bemerkung
+
+Schaltschrank mit Bedienpanel und Steuerung, Touchpanel mit einfacher
+Visualisierung. Dieser wird auf Sockel gestellt für den Wasserschutz.
+
+5.2
+
+Bau
+Am alten Standort des bestehenden Pflanzenfilters wird ein neues Betonbauwerk mit erweiterter Bodenplatte errichtet, auf dem die Schnellfilter aufgestellt werden. Das Filterbecken und das Ausgleichsbecken sind parallel zur Terraintrennwand und in Ausrichtung zum Schwimmbecken eingebaut. Ein Umgang ermöglicht die einfache Wartung. Die neue Filteranlage wird 40 cm tiefer als das bestehende Feinfilterbecken aufgestellt, was einer OK-Höhe von 471.67M.ü.M. entspricht. Dies erlaubt ein freies Abfliessen des Wassers in einem Kaskadensystem.
+Südlich der Anlage wird eine neue Zufahrt als Kiesweg angelegt, die über den Spielplatz der benachbarten Parzelle führt, welcher ebenfalls der Gemeinde Beringen gehört. Eine Wendefläche aus Rasengittersteinen ermöglicht das Abstellen der Betriebsfahrzeuge.
+Eine Retentionsfläche, die teilweise weiterhin als Biotop genutzt wird, bleibt erhalten. Diese Fläche dient
+als Überlauf des Ausgleichsbeckens und schafft gleichzeitig wichtigen Lebensraum für die Biodiversität.
+
+Becken
+Das Ausgleichsbecken wird aus Betonwänden und -boden ausgeführt. Das Ausgleichsbecken wie auch
+die Schnellfilter sind oben offen. Das Bauwerk ragt etwa 57 cm aus dem Boden heraus. Diese Höhe der
+Filterbecken wird definiert, durch den Abfluss des bestehenden Feinfilters. Die Platzierung des Beckens
+wurde so gewählt, dass möglichst wenig Erdmaterial verschoben oder aufgeschüttet werden muss. Der
+Standort entspricht dem des aktuellen Tiefbeckens des Naturfilters.
+
+Seite 26
+
+Bild 23: Übersicht, Stand Jan 25
+
+5.2.1
+
+Zustandsuntersuchung der Folie und des Betons
+Der separate Kurzbericht liegt im Anhang bei. Am 7. Oktober 2024 wurde der Zustand des Schwimmerbeckens im Freibad Beringen durch Hunziker Betatech AG überprüft. Ziel war es, die Beton- und Folienbeschaffenheit sowie eventuelle Bodenverunreinigungen zu analysieren. Es wurden drei Ausschnitte in
+der Beckenfolie erstellt und dabei Übergänge sowie Anschlüsse untersucht. An zwei Stellen am Beckenrand wurden Pflastersteine entfernt, um die Folienverbindung zu überprüfen. Bodenproben der umliegenden Wiese wurden auf ihre chemische Zusammensetzung untersucht.
+Die Untersuchung des Betons ergab, dass sowohl die Wände als auch die Bodenflächen des Beckens in
+gutem Zustand sind. Die Karbonatisierungstiefe ist gering, es sind keine Erosionsschäden zu sehen. Die
+Bewehrung ist rostfrei. Die Laborwerte bestätigen die hohe Druckfestigkeit und Haftzugfestigkeit des
+Betons.
+Die Folie im Becken wies einige Abnutzungen auf, insbesondere an Ecken und Kanten, die durch Flickstellen behoben wurden. Kalkablagerungen wurden teilweise gereinigt und die Folienanschlüsse am
+Randstein waren intakt und entsprechend den Plänen eingebaut. Die Bodenproben ergaben keine Hinweise auf chemische Stoffe, welche bei Grabenarbeiten zu deponieren gewesen wären.
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+5.3
+
+07. April 2025 / Seite 27
+
+Technikräume – Pumpenhaus (Bestand)
+Der Vorlauf zum Becken ist im Pumpenhaus einbetoniert, was eine einfache Zugänglichkeit unmöglich
+macht. Für die neue Erschliessung der Bestandleitungen wird ab der neuen Pumpe zum Becken das
+Erdreich geöffnet, um die Anschlussstelle an der Ringleitung freizulegen und anzuschliessen. Um die
+Pumpen aufzustellen, wird ein neuer Pumpenschacht neben dem Ausgleichsbecken geplant. Das bestehende Pumpenhaus dient zur Unterbringung von Gebläse, Schaltschrank und elektrischer Erschliessung.
+Massnahmen
+
+Bemerkung
+
+Demontage Bestand wo nötig
+Anpassungen Bauwerk, Kernbohrungen, Graben und Leitungsverbindung Ausgleichsbecken (AGB)
+Aushub für Anschluss Bestand
+Neuer Pumpenschacht neben dem AGB
+
+5.4
+
+Freibad
+
+5.4.1
+
+Folienauskleidung
+Die bestehende Folie wurde hinter und unter den schweren Granitrandsteinen verlegt. Dies erschwert
+eine einfache Auswechslung der Folie und verhindert einen unkomplizierten Farb- oder Produktwechsel.
+Im Rahmen dieses Vorprojekts wurden mit Herstellern und Unternehmern mögliche Detaillösungen erarbeitet und besprochen. Die Rinnenstücke werden beibehalten, es wird keine umlaufende Rinne geplant.
+
+Bild 24: FPO-Folie wt-5300-15c von SIKA
+
+Bild 25: Bestehende Folienauskleidung und Rinne
+
+Investitionskosten
+(Vergleich in %)
+
+Lebensdauer
+
+Investitionskosten
+(in % auf 45 Jahre)
+
+Eignung für Biobadi
+
+Folie
+
+100 %
+
+15 Jahre
+
+100 %
+
++/-
+
+Edelstahl
+
+200 %
+
+45 Jahre
+
+75 %
+
+++
+
+Keramik
+
+150 %
+
+30 Jahre
+
+55 %
+
++
+
+Seite 28
+
+In der Verfahrensstudie 2023 wurde ein 1:1-Ersatz der Folie vorgesehen, was kurzfristig die günstigste
+Projektlösung darstellt. Die Folie wird in den bestehenden Beckenkörper gelegt, mit den gleichen Anschlüssen unterhalb der Holzplatten und Beckenrandsteinen wie bisher. Tests haben gezeigt, dass eine
+neue Folie an den alten Bestand angesetzt werden kann. Der Baukommission wurde daher ein Ersatz
+mit Anschluss im oberen Randbereich an die bestehende Abdichtung vorgestellt, was in der BauKo 05
+freigegeben wurde. Eine zusätzliche CNS-Abdeckung, welche im Raum stand, wurde aus Kosten- und
+hygienischen Gründen verworfen.
+Die Lebensdauer der Folie wird auf rund 15 Jahre geschätzt, durch den hohen mechanischen Reinigungsaufwand könnte die Lebensdauer auch kürzer ausfallen.
+
+Bild 26: Randdetail
+
+Massnahmen
+
+Bemerkung
+
+Zurückschneiden der alten Folie
+Anschleifen der alten Folie
+Einsetzen neue Profilschiene
+Einbringung mittels Warmluftschweissverfahren der neuen Folie im Beckenkörper
+Revision und Unterhalt Kittfugen
+Lokale Sanierung des Drainage Vlies
+Befestigen der Rinnensteine, welche sich verschoben haben, Kosmetik-Übergang
+Beckenumgang zu Rinnenstein
+
+Optional
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+5.4.2
+
+07. April 2025 / Seite 29
+
+Funktionsbecken
+Filterbecken
+Die einzelnen Filter werden auf einer neu eingebrachten Bodenplatte installiert und seitlich mit Erdreich
+aufgeschüttet. Die 5 Filter sind im Kapitel 5.1.4 beschrieben.
+
+Ausgleichsbecken
+Dieses wird als Betonbauwerk umgesetzt und ist wiederum 40 cm tiefer als die Filterbecken angebracht.
+Ein Überlauf über in das südlich gelegene Biotop ist vorgesehen. Das Becken kann als Option mit einem
+Gitternetz oder Rost überdeckt werden. Zur Abdichtung wird das Ausgleichsbecken mit einer FPO-Folie
+belegt, analog dem Schwimmbad.
+
+Bild 27: Schnitt Ausgleichsbecken und Filterbecken
+
+Massnahmen
+Abbruch altes Pflanzenfiltermedium (teilweise Wiederverwendung im Biotop)
+Aushub für neuen Beckenkörper
+Einbringung Bodenplatte und Wände Ausgleichsbecken
+Abdeckung mit Poolblachen
+Fest installierte Leiter im AGB und Pumpenschacht
+
+Bemerkung
+
+Seite 30
+
+5.5
+
+Tiefbau
+Die Mehrheit der per Kanal-TV inspizierten Abwasserleitungen befindet sich in einem guten Zustand.
+Schäden wurden lediglich an den beiden Haltungen KS 3 – ASHK und KS 5 – KS 6 zur öffentlichen
+Kanalisation im Lieblosental festgestellt.
+
+Bild 28: Entleerungsleitungen, welche saniert werden müssen, sind rot eingekreist
+
+5.5.1
+
+Kanalisationsleitung
+Die Filterbecken werden alle paar Wochen für die Rückspülung entleert, dieses Wasser wird in die Kanalisation eingeleitet (alle 5-10 Wo., 5m³/Filter).
+Für das Ausgleichsbecken ist ein Schieber, für den Pumpenschacht ein Bodenablauf vorgesehen. Gemäss
+Koten Bestandesplan ist der Anschluss in die Kanalisation gegeben. Falls sich die Koten als abweichend
+herausstellen würden, könnte direkt in den KS5 angeschlossen werden.
+Massnahmen
+Reparatur der Entwässerungsleitungen
+Grabenarbeiten für neue Erschliessung der Leitungen
+Anschluss Entleerung auf Kanalisation, Erschliessungsleitung
+
+Bemerkung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+5.6
+
+Umgebungsarbeiten
+
+5.6.1
+
+Pflanzenfilter zu Biotop
+
+07. April 2025 / Seite 31
+
+Der vorhandene Pflanzenfilter wird zum grossen Teil mit der neuen Technik überbaut. Beim
+verbleibenden Teil wird die Teichabtrennung wieder vorgenommen, so dass ein wassergefüllter Bereich
+vorhanden bleibt, welcher als Biotop und Retentionsbecken funktioniert. Wo es die Grabenarbeiten
+tangiert, werden Schächte und Leitungen entfernt und verschlossen.
+
+Bild 29: bestehender Pflanzenfilter, wird im südlichen Teil beibehalten
+
+Massnahmen
+Biotop, Rückbau Teichfolie, Schächte, Leitungen
+Teilweise auffüllen der Fläche mit Erdreich vom Aushub Filterbecken
+Neubegrünung der Umgebung rund um das alte Filterbecken als Magerwiese
+Neue, einfache Liegewiese von ca. 290 m² als Rasenfläche östlich von Filterbecken.
+Neues Retentionsbecken mit Biotopanteil
+
+Bemerkung
+
+Seite 32
+
+5.6.2
+
+Zugang Pumpenhaus. Landschaftliches
+Im Rahmen der Bauarbeiten wird die entstandene Baupiste für die einfache Erschliessung an das
+Pumpenhaus beibehalten und entsprechend befestigt. Der Zugang erfolgt über die neue Erschliessung
+via Kinderspielplatz.
+Massnahmen
+
+Bemerkung
+
+Fällen oder zurückschneiden des Nussbaumes
+Anpassung des Zauns
+Neue Zugangstüre
+
+5.7
+
+Sanitäranlagen
+Neue Erschliessung der Netzwassernachspeisung im Ausgleichsbecken nach TBDV. Gemäss Berechnung
+müssten pro Tag maximal 30 m³ Frischwasser (Verdunstung) ausgeglichen werden. Mit der bestehenden
+2.5 Zoll Verbindung für die Duschen kann genügen Wasser zum Ausgleichsbecken geführt werden. Es
+wird eine Abtrennung ab Bestand, im Graben der Umbauarbeiten vorgesehen. Die Bedienung der
+Klappen erfolgt über den Pumpenschacht.
+
+5.8
+
+Elektro
+Im Rahmen der Modernisierung des Freibads Beringen werden die Elektroinstallationen erweitert und
+neu erstellt. Eine neue Unterverteilung im Pumpenhaus wird geplant, um die Energieversorgung der
+Pumpen sowie der Feldgeräte zu versorgen. Kabel- und Erschliessungswege werden im Pumpenhausbereich neu erstellt. Die Alarmierung erfolgt über ein einfaches System.
+Massnahmen
+Schaltgerätekombination erweitern, Unterverteilung neu
+Neue Erschliessung
+Installationssysteme, Licht- und Kraftinstallationen neu
+HLKS- und BWT-Installation
+Einfache technische Alarmierung
+NIV-Kontrolle und SiNa
+
+Bemerkung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+6
+
+07. April 2025 / Seite 33
+
+Kostenschätzung – erweitertes Vorprojekt
+Die Kostengenauigkeit liegt bei +/- 15% und ist nach Baukostenplan (BKP) gegliedert.
+Bei den Kostenangaben handelt es sich um Preisangaben mit Basis Oktober 2024 bis Februar 2025. Bei
+Sanierungsobjekten ist eine Kostenverschiebung zwischen den Arbeitsgattungen möglich. Je nach Ausführungsvariante und Detailgestaltung können sich die Kosten verändern.
+Die Kosten in Schweizerfranken und exklusiv Mehrwertsteuer können wie folgt zusammengefasst werden:
+Tabelle 12 Stand Abgabe Kosten, 7.4.2025
+
+Seite 34
+
+7
+
+Umweltrelevanz
+
+7.1
+
+Bauphase
+Es wurde eine materialtechnologische Untersuchung der bestehenden Bauteile durchgeführt. Sollten
+belastete Bauteile während der Bauzeit vorgefunden werden, würden diese fachgerecht entsorgt und
+durch schadstofffreie Bauteile ersetzt.
+Die neuen Antriebsmotoren der Filterpumpen weisen eine hohe Effizienzklasse auf.
+
+7.2
+
+Betrieb
+Stromsparende Teillastbetriebe der Beckenumwälzung bei Nachtbetrieb oder schlechtem Wetter.
+
+7.3
+
+Nachhaltigkeit
+Wie der technische Bericht der Hunziker Betatech AG vom Juli 2023 (Vergleichsstudie Bio-Chlor) aufgezeigt hat, ist ein Naturfilter umweltschonender und im Betrieb kostengünstiger. Die Reinigung erfolgt
+durch Pflanzen und Mikroorganismen, die Schadstoffe abbauen und das Wasser auf natürliche Weise
+sauber halten. Zwar muss das grosse bestehende Naturfilterbecken zurück gebaut werden, eine Magerwiese und eine Retentionsfläche erhalten aber einen Teil der wichtigen Biodiversität. Naturpools benötigen weniger Energie für den Betrieb, da keine aufwendigen Filtersysteme und chemischen Aufbereitungen notwendig sind. Das Schwimmen in einem Naturpool ist gesünder für die Haut und die Atemwege,
+da keine chemischen Rückstände im Wasser vorhanden sind. Rückmeldungen aus der Bevölkerung haben in der Machbarkeitsstudie gezeigt, dass die oben genannten Vorteile von der lokalen Bevölkerung
+sehr geschätzt werden.
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+8
+
+07. April 2025 / Seite 35
+
+Nutzungs- und Sicherheitsvereinbarung (NUSIV)
+Tabelle 13: siehe auch Risikoliste
+
+Nr.
+
+Bereich
+
+Beschrieb
+
+Restrisiko
+
+1
+
+Dimensionierung Biofilter
+
+Die Biofilter sind nach einer Besuchergastanzahl in einer Spitzenwoche ausgelegt.
+
+Punktuelle Überschreitung
+der Gästezahl kann zu einer
+kurzzeitigen Verschlechterung der Wasserqualität
+führen.
+
+2
+
+Beckengeometrie
+Sprungbecken
+
+Der Sprungturm wurde bereits in
+der bfu Begehung vom 2021 bemängelt. Die seitlichen Abstände
+sind knapp ungenügend.
+In diesem Projekt sind keine Massnahmen vorgesehen.
+
+Verletzungsrisiko für Badegäste beim Hineinspringen.
+Schliessen der Sprunganlage. Haftung der Gemeinde
+bei Unfällen.
+
+3
+
+Rinne Multifunktionsbecken
+
+Fehlende, umlaufende Rinnen
+
+Ungenügender Schmutzaustrag, Schmutzränder am Becken werden entstehen, erhöhter Reinigungsaufwand
+
+4
+
+Rinne Planschbecken
+
+Fehlende, umlaufende Rinnen
+
+Siehe Punkt 3
+
+5
+
+Rutschbahn Ansaugstelle
+
+Betrieb mit einer Ansaugstelle am
+Becken, Rutschbahnwasser wird
+nicht aufbereitet
+
+Keine aktive Überprüfung
+des VL-Rutschbahn. Evtl.
+Ansaugstelle vergrössern
+
+6
+
+Erdverlegte Leitungen
+
+Der Zustand der erdverlegten PELeitungen ist ungenügend, Wasserverlust ist bekannt
+
+Erhöhter Wasserverbrauch
+
+7
+
+Beckenerwärmung
+
+Es ist keine Beckenerwärmung vorgesehen
+
+Lange Aufheizzeiten durch
+natürliche Erwärmung mit
+der Umgebungstemperatur
+
+Seite 36
+
+9
+
+Optionen
+Mit der laufenden Projekterarbeitung wurden diverse Verbesserungen evaluiert, welche in der ursprünglichen Grobkostenschätzung und Auftragserteilung nicht berücksichtigt waren. Diese Optionen sind hier
+aufgeführt. Die Ausführung der Optionen bieten zusätzliche Verbesserungen für den Betrieb (z.B. Enthärtungsanlage) oder langfristig Sicherheiten (z.B. Beckenverrohrung).
+
+9.1
+
+Badewasser
+Beckenverrohrung
+Die Vor- und Rücklaufleitungen wurden in einem Drucktest im November 2024 geprüft. (BauKo 06). Die
+knapp 10-jährigen Leitungen sind unerwarteterweise nicht mehr dicht. Weiter wurde im Rahmen dieser
+Zustandsuntersuchungen entdeckt, dass es unterschiedliche Leitungsmaterialien (PE und PVC, ab Ringleitung zum Becken/Düse) sowie einbetonierte Schieber, welche nicht mehr funktionsfähig sind, gibt.
+Auch die vorliegenden Ausführungspläne der Bestandsleitungen stimmen nicht im Detail. Optional
+könnte das gesamte Leitungsnetz an Vor- und Rücklauf ersetzt werden.
+
+Entleerung Sprungbecken
+Der undichte Entleerungsschieber beim Sprungbecken wird von der Beckenseite her aufgebohrt, ohne
+Grabenarbeiten. Im bestehenden Schacht wird ein neuer Schieber angeflanscht. Diese Arbeiten werden
+nur durchgeführt, wenn keine Grabarbeiten um Schacht und Sprungturm notwendig sind.
+
+Teilentleerung Planschbecken
+Das Planschbecken wird beinahe täglich zu Reinigungszwecken in die Kanalisation entleert. Dadurch
+wird viel Frischwasser verbraucht, um das Becken wieder zu füllen. Mit einem neuen, grösseren Entleerungsschacht kann eine Umstellung auf die Rinnenrücklaufleitung angeschlossen werden, um ca.
+50 - 100 % des Planschbeckenvolumens in dem neuen Ausgleichsbecken für die Reinigung zwischenzuspeichern. Falls es die Gefällsituation nicht zulässt, müsste allenfalls noch eine Druckerhöhungspumpe
+zugeschalten werden.
+
+Entwässerung Rutschbahnschacht
+Der Rutschbahnschacht hat keinen Ablauf. Der Wunsch vom Betrieb an der BauKo vom 11.2.2025 lautet, diesen Schacht im Rahmen der allgemeinen Grabenarbeiten an die Kanalisation anzuschliessen.
+
+Feinfilter, Bestand
+Um die groben Partikel (Laub, Pflaster Haare etc.) aus dem System zu entfernen, kann ein zusätzliches
+Vorfiltersieb an dieser Position hilfreich sein. Kennt man aus den konventionellen Anlagen.
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+07. April 2025 / Seite 37
+
+Messung und Regelung
+Eine Messwasserstelle im Feinfilter kann dem Betrieb weitere Sicherheiten zu der Wasserqualität liefern.
+Da keine Regulierung der Messwerte aktuell vorgesehen ist, kann diese Messwasserstation auch nachträglich eingebaut werden. Sie dient dem Betrieb dazu, langfristige Daten wie pH, Sauerstoffzerrung,
+Phosphat und Temperatur zu erfassen und zu interpretieren. Die aktuellen Versuche aus Biberstein zeigen, dass eine Automatisierung mit einer Phosphatmessung schwierig umzusetzen ist. Das Phosphatmessgerät ist noch in Entwicklung, aktuell bietet es noch keine zuverlässige Messung. Könnte zu einem
+späteren Zeitpunkt ergänzt werden.
+Aus der Erfahrung Sommer 2024 Biberstein zeigt sich, dass die Phosphatmessung nicht in dem tiefen
+Messbereich funktioniert und daher aktuell für Beringen als Automationsparameter noch nicht als Standard eingesetzt werden können. Trotzdem macht eine teilweise Automatisierung jetzt Sinn für:
+ Langzeiterfassung (> 10Jahre, unverdichtet) der Messdaten und Betriebsweise der Anlage, zur Betriebsüberwachung und als Grundlage für die Optimierung (Energiemonitoring, etc.).
+ Besucherzahlen erfassen
+ Automation von Betriebsarten und Prozessen (wie Spülprozesse, etc.).
+Optional kann ein Fernzugriff vorgesehen werden.
+Die Automation kann z.B. sicherstellen, dass die Spülsequenzen immer gleich ablaufen. Sie werden
+dadurch vergleichbar und können optimiert werden. Die Biofilter müssen alle 5-10 Wochen rückgespült
+werden, Dauer ca. 2 h Aufwand. Die Aufforderung zur Rückspülung erfolgt via Niveaumessung im Überstand der Filter.
+Massnahmen
+
+Bemerkung
+
+Kompletter Ersatz Vorlauf zum Becken, ab den neuen Filterbecken/AGB
+Ersatz Rücklauf, Strang 3, bis zu Feinfilter
+Anpassungen Holzsteg bei Rücklauf Strang 3
+Grabenarbeiten um das gesamte Becken für den Leitungsersatz
+Entleerung des Planschbeckens zur täglichen Reinigung in das Ausgleichsbecken: Neuer grösserer Entleerungsschacht mit Klappe für Reinigung, evtl. Pumpe
+zur Förderung in Rinnenrücklauf, Steuerungstechnik
+Feinfilter: Neues Vorfiltersieb, inkl. Leitschienen
+Entleerung Rutschbahnpumpenschacht mit Anschluss an Kanalisation
+Messwasserpumpe, Messwasserstation mit Sonden und Feinfilter
+Entleerung Schieber (Sprung)-Becken
+Automation der Rückspülung
+Fernzugriff
+
+(Empfehlung)
+
+Seite 38
+
+9.2
+
+Bau
+Sprungturm
+Obwohl der Sprungturm klar ausserhalb des Perimeters definiert wurde, wurden gemäss BauKo vom
+11.02.2025 folgende Massnahmen als Kostenoptionen gewünscht:
+ Leine für die Abtrennung Schwimmer zu Sprungbereich, 2 Hülsen in Beckenwand  Position gilt es
+zu definieren, da der Sprungbereich des 3m Sprungturm geschnitten wird.
+ Stehstufe auf der Längsseite abbrechen, 4 neue Düsen und Leitungen einsetzten, Beton neu reprofilieren  keine Planerempfehlung
+ 1 m Sprungplattform, Geländer nach vorne verlängern, um seitliches Abspringen zu verhindern
+Diese Massnahmen wurden bei einer Begehung von einem bfu Experten zusammen mit Frau Ritzmann
+definiert. Eine schriftliche Stellungnahme des bfu wird von Frau Ritzmann eingefordert (wird dem Bericht
+beigelegt, wenn vorhanden).
+
+Leitern
+Die Leitern im Bereich Schwimmer- und Sprungbecken können optimiert platziert werden. Zudem wird
+eine neue Leiter in der Sprunggrube gewünscht. Die genaue Position gilt es noch zu definieren.
+
+Defekte Schieber Eindüsung
+Im Bereich des Sprungturms/Schwimmer ist bekannt, dass 2 Schieber defekt sind. Die Schieber liegen
+auf ca. 2 Meter Tiefe. Dies würde grössere Grabenarbeiten mit sich ziehen, und vor allem für den Sprungturm statische Abklärungen bedürfen.
+Gemäss BauKo 11.2.2025 wird vorgesehen, im Rahmen der Umbauarbeiten die defekten Schieber vom
+Becken aus anzubohren/komplett zu öffnen.
+
+Optik Biofilter
+Optisch ansprechende Holzabdeckung über Biofilter und Ausgleichsbecken
+
+Beckenrandsteine befestigen
+Im nördlichen Bereich des Beckens verschieben sich die Beckenrandsteine Richtung Becken und generieren so mit der Zeit grössere Spalten.
+Massnahmen
+Leinenabtrennung Sprungturm zu Schwimmerbahnen
+Stehstufe abbrechen, Leitungen und Düsen einlegen, Beton neu reprofilieren
+1x neue Leiter Sprunggrube
+2x neue Leiterplatzierung Sprung- und Schwimmerbecken
+Geländer anpassen beim 1m, vorziehen
+2 einbetonierte Schieber ausbohren
+Optisch ansprechende Holzverschalung Biofilter
+Beckenrandsteine Nord neu befestigen
+
+Bemerkung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+9.3
+
+07. April 2025 / Seite 39
+
+Sanitär
+Enthärtungsanlage
+Da bei biologischen Bädern keine Säure dosiert wird, fällt vermehrt Kalk aus, welcher sich auf der Folie
+absetzt. Dies führt zu betrieblichem Aufwand in der Revisionszeit. Auf Wunsch des Betriebes wurden
+die Kosten für eine Enthärtungsanlage des Füllwassers und Frischwassernachspeisung angefragt.
+Die Planenden empfehlen keine Enthärtungsanlagen für das Beckenwasser, da dies über das gesamte
+Füllwasser sowie Frischwasser wirtschaftlich und betrieblich fragwürdig ist. Dies trotz der hohen Aufwände bei der Gemeine für die Reinigung der Folie. (3 Personen, 3 Wochen, 8h/Tag, 78.-/h für die
+Reinigung jeden Frühling für die Reinigung der Folie, BauKo09, ca. 28'000.-)
+Massnahmen
+
+Bemerkung
+
+Enthärtungsanlage
+
+9.4
+
+Umgebungsarbeiten
+Neue Schotterpiste, Übernahme ab Baustelleninstallation und neue Baumbepflanzung auf der Liegewiese.
+Massnahmen
+
+Bemerkung
+
+Neue Baumpflanzung auf Liegewiese
+Ausbau der Schotterpiste der Baustelleninstallation (Rasengittersteine)
+
+9.5
+
+Grobkostenschätzung für Optionen, +/-25 %
+Die nachfolgende Tabelle zeigt die Kosten für zusätzliche Massnahmen auf. Diese sind nicht ausschlaggebend für die Umsetzung zur Sanierung der Biofilter sondern können zusätzliche, vor allem betriebliche
+Erleichterungen oder optische Verschönerungen bieten.
+Tabelle 14, Grobkostenschätzung nach SIA +-25%, Stand 4.3.2025
+
+Seite 40
+
+10
+
+Ausserhalb des Projektparameters
+Während der Projektbearbeitung zu den biologischen Schnellfiltern fielen mehrere Punkte auf, die nicht
+direkt mit der Filtersanierung zu tun haben. Die nicht abgeschlossenen Punkte wurden der Baukommission jeweils vorgestellt. Die Gemeinde/BauKo muss sich entscheiden, wie mit diesen Punkten umgegangen wird. Hunziker Betatech AG steht weiterhin gerne beratend zur Verfügung. Es werden keine Kosten
+angegeben.
+
+10.1
+
+Behindertengerechtes Bauen
+Nicht im Planungsperimeter. Wurde bereits umgesetzt, die Anlage ist für Rollstuhlfahrer zugänglich.
+
+10.2
+
+Unfallverhütung (bfu)
+Nicht im Planungsperimeter.
+Der vorliegende bfu Bericht aus dem Jahr 2021 enthält jedoch ein paar Massnahmen, die sich einfach in
+der biologischen Schnellfiltersanierung Sanierung umsetzen lassen:
+Kapitel 2.4.2, bfu
+ Trittstufen mit kontrastreichem Streifen versehen – dies wird geplant und ausgeschrieben im Projekt
+ Wassertiefen in Kontrastfarben bei Beckenzugängen anbringen – wird geplant und ausgeschrieben
+im Projekt
+ Hinweisschilder «nicht Hineinspringen» ergänzen - BauKo Information: Bereits ausgeführt
+Kapitel 3.4, bfu
+ Das Sprungbecken soll mit einem Begrenzungsseil vom Schwimmer getrennt werden
+ Sichtbare Bodenlinie Schwimmer-Nichtschwimmer. Begrenzungsseil wurde bereits umgesetzt
+ Die bfu empfiehlt, die Abstände beim Sprungturm zum Beckenkopf bei der nächsten Sanierung anzupassen. Entscheid BauKo: Nicht Teil des Planungsperimeters (BauKo05, 29.10.2024)
+Massnahmen
+
+Bemerkung
+
+Trittstufen farblich abgesetzt, Wassertiefen
+Sprungturm
+
+Nicht im Perimeter
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+10.3
+
+07. April 2025 / Seite 41
+
+Sprungturm und Startblöcke
+Nicht im Planungsperimeter.
+Die Begehung durch das bfu hat die seitlichen Abstände bei der Sprungplattform als ungenügend notiert. Entscheid BauKo 05, 29.10.2024 – wird nicht Teil des Projektes. Der Sprungturm steht auf der
+Abdichtung und wiegt mehrere Tonnen. Mögliche Massnahmen zu einer Verbesserung könnten sein:
+Ausrichtung anpassen, 3 m schliessen/zurückbauen, Geländer anpassen. Alle Massnahmen gilt es mit
+dem bfu vorzubesprechen. Gemäss BauKo 11.2.2025 wurden einige Kosten in den Optionen gewünscht, siehe Kapitel 9, neu ergänzt.
+
+Bild 30: bfu Massangaben
+
+Bild 31: Sprungplattform
+
+Bild 32: Sprungplattform mit sichtbarer Stehstufe
+
+Bild 33: Tabelle BFU
+
+Massnahmen
+Der Sprungturm entspricht nicht den Empfehlungen der bfu. Er ist nicht Teil
+dieses Projektes.
+
+Bemerkung
+
+Seite 42
+
+10.4
+
+Rutschbahn
+Nicht im Planungsperimeter.
+Die Ansaugstelle (1 Stück, Bild 34) für das Wasser der Rutschbahn befinden sich im Schwimmerbecken
+und ist mit einem Gitter abgedeckt (genaue Masse unbekannt). Es wird empfohlen, einen Haarfangtest
+durchzuführen, um allfällige Massnahmen zu prüfen. Im bfu Bericht aus dem Jahr 2021 stehen keine
+Empfehlungen zur Rutschbahn.
+Gemäss Rückmeldung vom Betrieb, liegt öfters Wasser im Schacht (Bild 35). Dieses könnte durch einen
+undichten Schacht, undichte Druckleitungen oder durch die Lüftungsauslässe eingedrungen sein. Weitere Abklärungen werden empfohlen.
+
+Bild 34: Ansaugstelle Becken
+
+Bild 35: Aufstellung Rutschbahnpumpe
+
+Massnahmen
+Haarfangtest
+Ansaugstelle Rutschbahn vergrössern (grössere Abdeckung)
+Hochwassersensor und/oder Tauchpumpe mit Entwässerungsanschluss für
+den Pumpenschacht
+Regenhut bei den Lüftungsauslässen vorsehen
+
+Bemerkung
+
+Erweitertes Vorprojekt Sanierung Bio-Schnellfilter
+Technischer Bericht
+
+10.5
+
+07. April 2025 / Seite 43
+
+Planschbecken und Attraktionen Planschbecken
+Nicht im Planungsperimeter.
+Die Druckerhöhungspumpe (4 m3/h, Bild 37) beim Planschbecken bedient die Attraktionen mit Reinwasser, welche mit Handventilen reguliert werden. Eine Steuerung ist nicht vorhanden. Gemäss Rückmeldung Betrieb, liegt öfters Wasser im Schacht. Dieses könnte durch einen undichten Schacht, undichte
+Druckleitungen oder durch die Lüftungsauslässe (Bild 36) eingedrungen sein. Weitere Abklärungen werden empfohlen.
+
+Bild 36: Belüftung Attraktionsschacht
+
+Bild 37: Aufstellung Attraktionspumpe, sichtbar
+ist ein kleiner Pumpensumpf unten rechts
+
+Massnahmen
+
+Bemerkung
+
+Hochwassersensor und/oder leistungsfähige Tauchpumpe mit Entwässerungsanschluss für den Pumpenschacht
+Regenhut bei den Lüftungsauslässen vorsehen
+
+10.6
+
+Bau, Pumpenhaus
+Wunsch Betrieb: Vergrösserung des alten Pumpenhauses mit Isolation für „Winterbetrieb“
+Massnahmen
+Vergrösserung Pumpenhaus und Isolation
+
+Bemerkung
+
+Seite 44
+
+11
+
+Weiteres Vorgehen
+Das weitere Vorgehen wird in Absprache mit dem Auftraggeber definiert. Wir empfehlen folgende
+Schritte:
+ BauKo führt Rücksprache mit der Schwimmbadkommission durch
+ Vorstellung Projekt an einer Gemeinderatssitzung. HBT und ASC werden von der BauKo frühzeitig
+informiert
+ Die BauKo bestimmt, nach dem Zeitplan der Abstimmung, wann die Baubewilligung eingereicht
+wird.
+ BauKo: Urnenabstimmung vorbereiten und durchführen: Herbst 2025
+
+12
+
+Verteiler
+ Baukommission Beringen
+ Ablage aller Dokumente auf der Projektplattform ACC
+
+13
+
+Beilagen und Pläne
+ Terminplan eVP
+ Badewasser R+I
+ Übersichtsplan Leitungsplan
+ Risikoliste, angepasst
+ KS 15%_dreistellig
+ gKS 25% _dreistellig inkl. Detail zu Optionen
+ CFD Analyse Bericht
+ Kurzbericht zu den baulichen Untersuchungen
+
+Winterthur, 07. April 2025
+von / osw
+Hunziker Betatech AG
+Pflanzschulstrasse 17
+8400 Winterthur
+
+

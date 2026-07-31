@@ -20,7 +20,65 @@ function handleInitialScroll() {
   window.scrollTo(0, 0);
 }
 
-document.addEventListener('DOMContentLoaded', handleInitialScroll);
+document.addEventListener('DOMContentLoaded', () => {
+  handleInitialScroll();
+
+  // Randomize variants
+  const variants = document.querySelectorAll('.random-variant');
+  let familySelected = false;
+  let keinChlorSelected = false;
+  let erholungSelected = false;
+
+  variants.forEach(el => {
+    const dataVariants = el.getAttribute('data-variants');
+    if (dataVariants) {
+      const options = dataVariants.split(',');
+      const choice = options[Math.floor(Math.random() * options.length)];
+      
+      if (choice === 'none') {
+        el.style.display = 'none';
+      } else {
+        el.style.display = 'block';
+        el.src = choice;
+      }
+
+      if (choice.includes('family.svg')) {
+        familySelected = true;
+        el.classList.add('is-family');
+      } else {
+        el.classList.remove('is-family');
+      }
+      
+      if (choice.includes('swimmer.svg') || choice.includes('swimmer2.svg')) {
+        keinChlorSelected = true;
+      }
+      
+      if (choice.includes('couple.svg')) {
+        erholungSelected = true;
+      }
+    }
+  });
+
+  if (familySelected) {
+    const familyBubble = document.getElementById('bubble-family');
+    if (familyBubble) familyBubble.style.display = 'block';
+    const waterSplash = document.getElementById('water-splash');
+    if (waterSplash) waterSplash.style.display = 'none';
+  } else {
+    const waterSplash = document.getElementById('water-splash');
+    if (waterSplash) waterSplash.style.display = 'block';
+  }
+  
+  if (keinChlorSelected) {
+    const keinChlorBubble = document.getElementById('bubble-kein-chlor');
+    if (keinChlorBubble) keinChlorBubble.style.display = 'block';
+  }
+  
+  if (erholungSelected) {
+    const erholungBubble = document.getElementById('bubble-erholung');
+    if (erholungBubble) erholungBubble.style.display = 'block';
+  }
+});
 
 // -----------------------------------------------------------------------------
 // Interactive Poster Behaviour

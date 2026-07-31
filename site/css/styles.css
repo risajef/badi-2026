@@ -256,10 +256,10 @@ main {
 /* Positions taken from the original PDF layout (in % of poster size) */
 
 .el--pool-scene {
-  right: 0%;
+  right: -6%;
   top: 0%;
-  width: 50.8109%;
-  height: 28.0953%;
+  width: 54.8109%;
+  height: 30.0953%;
 }
 
 .el--tagline {
@@ -287,6 +287,8 @@ main {
   top: 35.2381%;
   width: 15.7466%;
   height: 18.2173%;
+  transform: scale(0.85);
+  transform-origin: center center;
 }
 
 .el--woman-legs {
@@ -309,6 +311,7 @@ main {
   height: 5.3897%;
   animation: splash-pulse 3.5s ease-in-out infinite alternate;
   transform-origin: 50% 100%;
+  clip-path: inset(0 50% 0 0); /* only show left splash for torso, legs use their own */
 }
 
 @keyframes splash-pulse {
@@ -333,7 +336,7 @@ main {
 }
 
 .el--slide-group {
-  left: 69.9301%;
+  left: 71%;
   top: 7.3334%;
   width: 11.0906%;
   height: 16.3718%;
@@ -350,6 +353,24 @@ main {
   height: 100%;
 }
 
+.slide-figure-1 {
+  animation: alternate-figure-1 6s step-end infinite;
+}
+
+.slide-figure-2 {
+  animation: alternate-figure-2 6s step-end infinite;
+}
+
+@keyframes alternate-figure-1 {
+  0%, 49.99% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@keyframes alternate-figure-2 {
+  0%, 49.99% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}
+
 .slide-group__bubble {
   left: -215.8%;
   top: 0%;
@@ -362,6 +383,13 @@ main {
   height: 12.8256%;
   animation: woman-bob 5s ease-in-out infinite alternate;
   transform-origin: 50% 100%;
+}
+
+.el--woman-torso.is-family {
+  width: 25.36%;
+  height: 19.23%;
+  left: 9.88%;
+  top: 39.54%;
 }
 
 @keyframes woman-bob {
@@ -397,32 +425,21 @@ main {
 }
 
 @keyframes slide-loop {
-  45% {
-    transform: translateY(68%) translateX(-20%);
-    opacity: 1;
-  }
-
-  58% {
-    transform: translateY(78%) translateX(-20%);
+  0%, 15% {
+    transform: translateY(-100%) translateX(40%);
     opacity: 0;
   }
-
-  59%,
+  15%, 16% {
+    transform: translateY(-100%) translateX(40%);
+    opacity: 1;
+  }
   60% {
-    transform: translateY(-130%) translateX(20%);
+    transform: translateY(78%) translateX(-22%);
+    opacity: 1;
+  }
+  65%, 100% {
+    transform: translateY(85%) translateX(-25%);
     opacity: 0;
-  }
-
-  60%,
-  61% {
-    transform: translateY(-130%) translateX(20%);
-    opacity: 1;
-  }
-
-  60%,
-  100% {
-    transform: translateY(0) translateX(0);
-    opacity: 1;
   }
 }
 
@@ -472,7 +489,7 @@ main {
   border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
 }
 
-/* 2. "Für alle Generationen" (Upper right swimmer - right-side edge tick) */
+/* 2. "Für alle Generationen" (Upper right) */
 .poster-bubble--2 {
   left: 45%;
   top: 42%;
@@ -489,35 +506,38 @@ main {
   border-color: transparent transparent transparent rgba(255, 255, 255, 0.95);
 }
 
-/* 3. "Erholung in der Natur" (Dark hair swimmer - tail tick anchored at 20% from right) */
+/* 3. "Erholung in der Natur" (Couple - bottom left) */
 .poster-bubble--3 {
-  left: 2%;
-  top: 43%;
+  left: 3%;
+  top: 68%;
   transform: rotate(-2deg);
   animation-delay: 1.4s;
   border-radius: 14px;
 }
 
 .poster-bubble--3::after {
-  right: 20%;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: -7px;
-  border-width: 7px 0 0 8px;
+  border-width: 7px 6px 0 6px;
   border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
 }
 
-/* 4. "Riesenspass für Kinder" (Sliding girl - right-side edge tick) */
-.slide-group__bubble {
+/* 4. "Riesenspass für Kinder" (Family) */
+.poster-bubble--family {
+  left: 10%;
+  top: 38%;
   transform: rotate(3deg);
   animation-delay: 2.1s;
   border-radius: 14px;
 }
 
-.slide-group__bubble::after {
-  right: -7px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-width: 5px 0 5px 7px;
-  border-color: transparent transparent transparent rgba(255, 255, 255, 0.95);
+.poster-bubble--family::after {
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -7px;
+  border-width: 7px 6px 0 6px;
+  border-color: rgba(255, 255, 255, 0.95) transparent transparent transparent;
 }
 
 @keyframes bubble-float {
