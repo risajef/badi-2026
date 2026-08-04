@@ -916,6 +916,36 @@ main {
   }
 }
 
+/* ---- Contact ---- */
+
+.contact {
+  padding: 4.5rem 1.5rem;
+  background: var(--color-body-bg);
+}
+
+.contact__inner {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact__inner p {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.contact__inner a {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.contact__inner a:hover {
+  color: #003a5e;
+}
+
 /* ---- Credits ---- */
 
 .site-credits {
@@ -1052,18 +1082,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: var(--color-primary);
-  color: #ffffff;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(0, 91, 145, 0.2);
 }
 
-.argument-card__icon--secondary {
-  background: var(--color-water);
-  color: var(--color-primary);
+.argument-card__icon img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.argument-card__icon--secondary img {
+  width: 50px;
+  height: 50px;
 }
 
 /* ---- FAQ Section ---- */
