@@ -14,11 +14,11 @@ Diese Seite ist die offizielle Informations- und Kampagnenseite des überparteil
 
 ## Seiten
 
-- [Startseite mit allen Argumenten](https://badi-2026.retoweber.info/): Übersicht, Argumente für ein JA, Spendenmöglichkeit
-- [Argumente](https://badi-2026.retoweber.info/#argumente): Finanzierung, Planungssicherheit, Ökologie, Gemeinschaft
-- [Spenden](https://badi-2026.retoweber.info/#spenden): Kampagne per QR-Code/E-Banking unterstützen (über EVP Kanton Schaffhausen)
+- [Startseite mit allen Argumenten](https://badi-ja.ch/): Übersicht, Argumente für ein JA, Spendenmöglichkeit
+- [Argumente](https://badi-ja.ch/#argumente): Finanzierung, Planungssicherheit, Ökologie, Gemeinschaft
+- [Spenden](https://badi-ja.ch/#spenden): Kampagne per QR-Code/E-Banking unterstützen (über EVP Kanton Schaffhausen)
 
 ## Kontakt
 
-- Website: https://badi-2026.retoweber.info/
+- Website: https://badi-ja.ch/
 - Erstellt von Reto Weber (Einwohnerrat EVP Beringen), https://retoweber.info
