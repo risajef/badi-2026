@@ -942,6 +942,16 @@ main {
   object-position: 50% 45%;
 }
 
+.statement-card--long {
+  grid-column: 1 / -1;
+  width: calc(50% - 0.75rem);
+  justify-self: center;
+}
+
+.statement-card--long blockquote p + p {
+  margin-top: 0.8rem;
+}
+
 .statement-card blockquote {
   position: relative;
   z-index: 1;
@@ -987,6 +997,11 @@ main {
   .statements__grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  .statement-card--long {
+    grid-column: auto;
+    width: auto;
   }
 }
 
