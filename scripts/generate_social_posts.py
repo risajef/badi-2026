@@ -203,7 +203,7 @@ STATEMENTS = [
         focus=(0.5, 0.4),
         quote=(
             "Ich bin für diese Sanierung der Badi Beringen, "
-            "weil sie günstiger und ökologischer ist als die Alternative ist."
+            "weil sie günstiger und ökologischer ist als die Alternative."
         ),
     ),
     dict(
