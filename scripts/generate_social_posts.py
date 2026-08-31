@@ -229,6 +229,18 @@ STATEMENTS = [
             "Einzigartigkeit."
         ),
     ),
+    dict(
+        slug="lukas-ruedlinger",
+        name="Lukas Rüedlinger",
+        role="Einwohnerrat SP Beringen",
+        photo=STATEMENTS_DIR / "lukas.jpg",
+        focus=(0.5, 0.45),
+        quote=(
+            "Eine Gemeinde in unserer Grösse braucht einen Ort wie diesen. "
+            "Wir investieren nicht nur in ein Schwimmbecken – wir investieren "
+            "in Begegnungen, in unsere Kinder und in unsere Gemeinschaft."
+        ),
+    ),
 ]
 
 
