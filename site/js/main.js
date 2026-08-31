@@ -284,6 +284,108 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 // -----------------------------------------------------------------------------
+// Share statement social posts
+// -----------------------------------------------------------------------------
+
+(function initStatementSharing() {
+  const shareButtons = document.querySelectorAll('.statement-card__share');
+  if (!shareButtons.length) return;
+
+  const campaignUrl = new URL('#statements', window.location.href).href;
+  const campaignSuffix = `\n\nJA zur Sanierung der Badi Beringen. Jetzt handeln statt später von vorne beginnen.\n${campaignUrl}`;
+
+  function setButtonLabel(button, label) {
+    const labelEl = button.querySelector('span');
+    if (labelEl) labelEl.textContent = label;
+  }
+
+  async function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(text);
+      return;
+    }
+
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.setAttribute('readonly', '');
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+  }
+
+  function downloadImage(imageUrl, fileName) {
+    const link = document.createElement('a');
+    link.href = imageUrl;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+  }
+
+  async function getShareFile(imageUrl, fileName) {
+    const response = await fetch(imageUrl);
+    if (!response.ok) throw new Error(`Could not load share image: ${response.status}`);
+    const blob = await response.blob();
+    return new File([blob], fileName, { type: blob.type || 'image/jpeg' });
+  }
+
+  shareButtons.forEach((button) => {
+    button.addEventListener('click', async () => {
+      if (button.disabled) return;
+
+      const name = button.dataset.shareName || 'Ja zur Badi';
+      const quote = button.dataset.shareText || '';
+      const imageUrl = new URL(button.dataset.shareImage, document.baseURI);
+      const fileName = `ja-zur-badi-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.jpg`;
+      const shareText = `„${quote}“\n\n${name}${campaignSuffix}`;
+      const shareData = {
+        title: `${name}: Ja zur Badi Beringen`,
+        text: shareText,
+        url: campaignUrl,
+      };
+
+      button.disabled = true;
+      setButtonLabel(button, 'Wird vorbereitet ...');
+
+      try {
+        let shareFile = null;
+        try {
+          shareFile = await getShareFile(imageUrl, fileName);
+        } catch (error) {
+          console.warn('Share image could not be loaded', error);
+        }
+
+        const canShareFile = shareFile && navigator.canShare && navigator.canShare({ files: [shareFile] });
+        if (navigator.share && canShareFile) {
+          await navigator.share({ ...shareData, files: [shareFile] });
+          setButtonLabel(button, 'Geteilt');
+        } else if (navigator.share) {
+          await navigator.share(shareData);
+          setButtonLabel(button, 'Link geteilt');
+        } else {
+          downloadImage(imageUrl.href, fileName);
+          await copyText(shareText);
+          setButtonLabel(button, 'Bild + Text bereit');
+        }
+      } catch (error) {
+        if (error.name !== 'AbortError') {
+          console.error('Statement could not be shared', error);
+          setButtonLabel(button, 'Teilen nicht möglich');
+        }
+      } finally {
+        window.setTimeout(() => {
+          button.disabled = false;
+          setButtonLabel(button, 'Teilen');
+        }, 2600);
+      }
+    });
+  });
+})();
+
+// -----------------------------------------------------------------------------
 // Live Countdown to 27. September 2026, 10:00
 // -----------------------------------------------------------------------------
 
