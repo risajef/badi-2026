@@ -329,7 +329,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const response = await fetch(imageUrl);
     if (!response.ok) throw new Error(`Could not load share image: ${response.status}`);
     const blob = await response.blob();
-    return new File([blob], fileName, { type: blob.type || 'image/jpeg' });
+    return new File([blob], fileName, { type: blob.type || 'image/png' });
   }
 
   shareButtons.forEach((button) => {
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const name = button.dataset.shareName || 'Ja zur Badi';
       const quote = button.dataset.shareText || '';
       const imageUrl = new URL(button.dataset.shareImage, document.baseURI);
-      const fileName = `ja-zur-badi-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.jpg`;
+      const fileName = `ja-zur-badi-${name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}.png`;
       const shareText = `„${quote}“\n\n${name}${campaignSuffix}`;
       const shareData = {
         title: `${name}: Ja zur Badi Beringen`,

@@ -1,173 +1,325 @@
 #!/usr/bin/env python3
-"""Generate Instagram/Facebook Story-format (1080x1920) quote cards for the
-personal statements on the site, reusing the campaign's mint/navy
-Montserrat-Black design language (same as 260731_Ja-zur-Badi-Digital-1080x1920.jpg
-and site/index.html #statements).
+"""Generate the statement cards from the designer's 1080x1920 templates.
+
+The supplied SVGs contain the complete artwork, illustrations and footer
+lockup. This script removes the sample name, function and quote from the
+templates, then renders the same layout with the statement-specific copy.
 
 Run: python3 scripts/generate_social_posts.py
-Output: site/assets/social/*.jpg
+Output: site/assets/social/*.png (1080x1920)
 """
+
 import subprocess
-import textwrap
+import xml.etree.ElementTree as ET
+from functools import lru_cache
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFont, ImageOps
+
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
-STATEMENTS_DIR = ROOT / "site" / "statements"
-ELEMENTS_DIR = ROOT / "site" / "assets" / "elements"
 OUT_DIR = ROOT / "site" / "assets" / "social"
+TEMPLATE_DIR = ROOT / "socialmediavorlagen"
 CACHE_DIR = ROOT / "scripts" / ".cache"
+STATEMENTS_DIR = ROOT / "site" / "statements"
+EVP_LOGO_PATH = ROOT / "site" / "assets" / "elements" / "logo-evp.png"
+
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 CACHE_DIR.mkdir(parents=True, exist_ok=True)
 
-# ---- Brand palette (from site/css/styles.css :root) ----
-MINT = (156, 209, 201)
-MINT_LIGHT = (232, 244, 242)
-NAVY = (0, 91, 145)
-WHITE = (255, 255, 255)
-
 W, H = 1080, 1920
+SVG_NS = "http://www.w3.org/2000/svg"
+XLINK_NS = "http://www.w3.org/1999/xlink"
+
+# These are the colors used by the designer artwork for the dynamic copy.
+TEMPLATE_NAVY = (0, 70, 113)
 
 FONT_TTF = CACHE_DIR / "Montserrat-Black.ttf"
+QUOTE_FONT_CANDIDATES = (
+    DATA / "Montserrat-Regular.otf",
+    Path("/usr/share/texlive/texmf-dist/fonts/opentype/public/montserrat/Montserrat-Regular.otf"),
+    Path("/usr/share/fonts/truetype/montserrat/Montserrat-Regular.ttf"),
+)
+TEMPLATE_PATHS = [
+    TEMPLATE_DIR / f"Badi-Beringen-Social-Media_1080x1920-{number:02d}.svg"
+    for number in range(1, 5)
+]
+TEMPLATE_RENDER_VERSION = "v2"
+PHOTO_BOX = (330, 146, 750, 566)
+EVP_LOGO_POSITION = (318, 1769)
+EVP_LOGO_SIZE = (91, 91)
 
 
 def ensure_font():
+    """Convert the supplied Montserrat Black webfont for Pillow."""
     if FONT_TTF.exists():
         return
+
     from fontTools.ttLib import TTFont
-    f = TTFont(DATA / "font-0024.woff")
-    f.flavor = None
-    f.save(str(FONT_TTF))
+
+    font_file = TTFont(DATA / "font-0024.woff")
+    font_file.flavor = None
+    font_file.save(str(FONT_TTF))
 
 
+@lru_cache(maxsize=None)
 def font(size):
     return ImageFont.truetype(str(FONT_TTF), size)
 
 
-LOGO_SVGS = {
-    "fdp": ELEMENTS_DIR / "logo_fdp.svg",
-    "gl": ELEMENTS_DIR / "logo-gruenliberale.svg",
-    "sp": ELEMENTS_DIR / "logo-sp.svg",
-}
+def quote_font_path():
+    for candidate in QUOTE_FONT_CANDIDATES:
+        if candidate.exists():
+            return candidate
+    # The supplied webfont is a safe fallback on machines without a separate
+    # Montserrat Regular installation. The generated layout still remains
+    # fully functional; the designer's exact weight is used when available.
+    return FONT_TTF
 
 
-def ensure_logo_pngs():
-    for name, svg in LOGO_SVGS.items():
-        out = CACHE_DIR / f"logo-{name}.png"
-        if out.exists():
-            continue
-        subprocess.run(
-            [
-                "inkscape", str(svg),
-                "--export-type=png",
-                "--export-height=500",
-                "--export-background-opacity=0",
-                f"--export-filename={out}",
-            ],
-            check=True, capture_output=True,
+@lru_cache(maxsize=None)
+def quote_font(size):
+    return ImageFont.truetype(str(quote_font_path()), size)
+
+
+def local_name(tag):
+    return tag.rsplit("}", 1)[-1]
+
+
+def element_text(element):
+    return " ".join(
+        part.strip()
+        for part in element.itertext()
+        if part and part.strip()
+    )
+
+
+def is_vectorized_quote(element):
+    """Identify the converted-to-path quote group in the supplied SVG."""
+    return any(
+        local_name(child.tag) == "path"
+        and child.attrib.get("d", "").startswith("M135.3,938.7")
+        for child in element.iter()
+    )
+
+
+def clean_template(template_path):
+    """Remove sample copy and the two raster placeholders from a template."""
+    ET.register_namespace("", SVG_NS)
+    ET.register_namespace("xlink", XLINK_NS)
+    root = ET.parse(template_path).getroot()
+
+    # The sample name and function are live SVG text elements. Remove them so
+    # Pillow can draw replacement text with the local Montserrat font.
+    placeholders = {"VORNAME UND NACHNAME", "FUNKTION"}
+    for parent in root.iter():
+        for child in list(parent):
+            if local_name(child.tag) == "text" and element_text(child) in placeholders:
+                parent.remove(child)
+
+    # The sample quote was expanded to paths by the designer, so it is a
+    # group rather than editable text. It is the only direct child containing
+    # the quote's first glyph path.
+    quote_groups = [child for child in root if is_vectorized_quote(child)]
+    if len(quote_groups) != 1:
+        raise RuntimeError(
+            f"Expected one vectorized quote group in {template_path}, "
+            f"found {len(quote_groups)}"
         )
+    root.remove(quote_groups[0])
+
+    # The designer's red X is embedded as two raster images: one in the top
+    # photo frame and one in the footer party-logo slot. Remove those images
+    # so the real photo and EVP logo can be composited cleanly below.
+    for parent in root.iter():
+        for child in list(parent):
+            if local_name(child.tag) != "image":
+                continue
+            width = child.attrib.get("width")
+            height = child.attrib.get("height")
+            transform = child.attrib.get("transform", "")
+            is_top_placeholder = (
+                width == "300"
+                and height == "300"
+                and "translate(320 136.8)" in transform
+            )
+            is_footer_placeholder = (
+                width == "150"
+                and height == "150"
+                and "translate(317.9346 1769.5266)" in transform
+            )
+            if is_top_placeholder or is_footer_placeholder:
+                parent.remove(child)
+
+    return ET.tostring(root, encoding="unicode")
 
 
-def load_logo(name):
-    if name == "evp":
-        return Image.open(ELEMENTS_DIR / "logo-evp.png").convert("RGBA")
-    return Image.open(CACHE_DIR / f"logo-{name}.png").convert("RGBA")
+def render_template(template_path, template_number):
+    """Render a cleaned SVG once and return its pixel background."""
+    clean_path = CACHE_DIR / (
+        f"social-template-{template_number:02d}-{TEMPLATE_RENDER_VERSION}-clean.svg"
+    )
+    png_path = CACHE_DIR / (
+        f"social-template-{template_number:02d}-{TEMPLATE_RENDER_VERSION}-clean.png"
+    )
+
+    # Rebuild the cached render whenever the designer replaces a template.
+    if (
+        not clean_path.exists()
+        or not png_path.exists()
+        or png_path.stat().st_mtime < template_path.stat().st_mtime
+    ):
+        clean_path.write_text(clean_template(template_path), encoding="utf-8")
+        try:
+            subprocess.run(
+                [
+                    "inkscape",
+                    str(clean_path),
+                    "--export-filename",
+                    str(png_path),
+                    "--export-width",
+                    str(W),
+                    "--export-height",
+                    str(H),
+                ],
+                check=True,
+                capture_output=True,
+                text=True,
+            )
+        except FileNotFoundError as error:
+            raise RuntimeError(
+                "Inkscape ist zum Rendern der Social-Media-Vorlagen nicht installiert."
+            ) from error
+        except subprocess.CalledProcessError as error:
+            details = error.stderr.strip() or error.stdout.strip()
+            raise RuntimeError(
+                f"Vorlage {template_path.name} konnte nicht gerendert werden: {details}"
+            ) from error
+
+    return Image.open(png_path).convert("RGBA")
 
 
-def paste_logo_row(canvas, y_center, height_footer):
-    """Reproduces the flyer's footer logo row: FDP, EVP, Grünliberale, SP,
-    each sized to a fraction of the footer band height (same ratios as
-    site/css/styles.css .site-footer__logo--*), scaled down together if
-    the row would otherwise overflow the canvas width."""
-    specs = [
-        ("fdp", 0.45),
-        ("evp", 0.85),
-        ("gl", 0.28),
-        ("sp", 0.60),
-    ]
-    gap = 56
-    margin = 60
-    max_w = W - margin * 2
-
-    imgs = []
-    for name, frac in specs:
-        logo = load_logo(name)
-        target_h = int(height_footer * frac)
-        ratio = target_h / logo.height
-        imgs.append(logo.resize((max(1, int(logo.width * ratio)), target_h), Image.LANCZOS))
-
-    total_w = sum(im.width for im in imgs) + gap * (len(imgs) - 1)
-    if total_w > max_w:
-        scale = max_w / total_w
-        imgs = [im.resize((max(1, int(im.width * scale)), max(1, int(im.height * scale))), Image.LANCZOS) for im in imgs]
-        total_w = sum(im.width for im in imgs) + gap * (len(imgs) - 1)
-
-    x = (W - total_w) // 2
-    for im in imgs:
-        y = y_center - im.height // 2
-        canvas.alpha_composite(im, (x, y))
-        x += im.width + gap
+def fit_single_line(draw, text, max_width, start_size, min_size):
+    for size in range(start_size, min_size - 1, -1):
+        current_font = font(size)
+        if draw.textlength(text, font=current_font) <= max_width:
+            return current_font
+    return font(min_size)
 
 
-def rounded_mask(size, radius):
-    mask = Image.new("L", size, 0)
-    ImageDraw.Draw(mask).rounded_rectangle([0, 0, size[0] - 1, size[1] - 1], radius=radius, fill=255)
-    return mask
+def wrap_text(draw, text, current_font, max_width):
+    """Wrap words by rendered width, including a safe long-word fallback."""
+    lines = []
+    current = ""
 
+    for word in text.split():
+        trial = f"{current} {word}".strip()
+        if not current or draw.textlength(trial, font=current_font) <= max_width:
+            current = trial
+            continue
 
-def circle_portrait(path, diameter, focus=(0.5, 0.5)):
-    im = Image.open(path).convert("RGB")
-    im = ImageOps.fit(im, (diameter, diameter), method=Image.LANCZOS, centering=focus)
-    mask = Image.new("L", (diameter, diameter), 0)
-    ImageDraw.Draw(mask).ellipse([0, 0, diameter - 1, diameter - 1], fill=255)
-    out = Image.new("RGBA", (diameter, diameter))
-    out.paste(im, (0, 0), mask)
-    return out
+        lines.append(current)
+        current = word
 
+    if current:
+        lines.append(current)
 
-def soft_shadow(canvas, box, radius, blur=28, opacity=70, shape="rounded", corner_radius=0):
-    """box=(x0,y0,x1,y1) in canvas coords. Draws a blurred dark shape behind content."""
-    pad = blur * 3
-    layer = Image.new("RGBA", (box[2] - box[0] + pad * 2, box[3] - box[1] + pad * 2), (0, 0, 0, 0))
-    d = ImageDraw.Draw(layer)
-    lb = [pad, pad, layer.width - pad, layer.height - pad]
-    if shape == "ellipse":
-        d.ellipse(lb, fill=(0, 40, 60, opacity))
-    else:
-        d.rounded_rectangle(lb, radius=corner_radius, fill=(0, 40, 60, opacity))
-    layer = layer.filter(ImageFilter.GaussianBlur(blur))
-    canvas.alpha_composite(layer, (box[0] - pad, box[1] - pad))
+    # The supplied statements do not contain long unbroken words, but keeping
+    # this fallback makes the generator safe for future statements as well.
+    safe_lines = []
+    for line in lines:
+        if draw.textlength(line, font=current_font) <= max_width:
+            safe_lines.append(line)
+            continue
 
-
-def fit_quote(draw, text, max_width, max_height, start_size=46, min_size=28):
-    for size in range(start_size, min_size - 1, -2):
-        f = font(size)
-        # wrap by measuring, word by word
-        words = text.split()
-        lines, cur = [], ""
-        for w in words:
-            trial = (cur + " " + w).strip()
-            if draw.textlength(trial, font=f) <= max_width:
-                cur = trial
+        fragment = ""
+        for character in line:
+            trial = fragment + character
+            if fragment and draw.textlength(trial, font=current_font) > max_width:
+                safe_lines.append(fragment)
+                fragment = character
             else:
-                lines.append(cur)
-                cur = w
-        if cur:
-            lines.append(cur)
-        line_h = int(size * 1.42)
-        total_h = line_h * len(lines)
-        if total_h <= max_height:
-            return f, lines, line_h
-    return f, lines, line_h
+                fragment = trial
+        if fragment:
+            safe_lines.append(fragment)
+
+    return safe_lines
 
 
-def draw_centered(draw, text, cy, size, fill, canvas_w=W):
-    f = font(size)
-    w = draw.textlength(text, font=f)
-    draw.text(((canvas_w - w) / 2, cy), text, font=f, fill=fill)
-    return f
+def fit_quote(draw, text, max_width, max_height, start_size=65, min_size=36):
+    for size in range(start_size, min_size - 1, -1):
+        current_font = quote_font(size)
+        lines = wrap_text(draw, text, current_font, max_width)
+        line_height = int(size * 1.28)
+        if line_height * len(lines) <= max_height:
+            return current_font, lines, line_height
+
+    current_font = quote_font(min_size)
+    return current_font, wrap_text(draw, text, current_font, max_width), int(min_size * 1.28)
+
+
+def draw_baseline_text(draw, text, x, baseline, current_font, fill=TEMPLATE_NAVY, centered=False):
+    if centered:
+        x -= draw.textlength(text, font=current_font) / 2
+    draw.text((x, baseline), text, font=current_font, fill=fill, anchor="ls")
+
+
+def draw_quote(draw, quote):
+    # This matches the quote block in the supplied artwork: white background,
+    # centered Montserrat copy and generous vertical breathing room.
+    quote_text = f"«{quote}»"
+    left, top, right, bottom = 90, 860, 990, 1280
+    current_font, lines, line_height = fit_quote(
+        draw,
+        quote_text,
+        max_width=right - left,
+        max_height=bottom - top,
+    )
+
+    block_height = line_height * len(lines)
+    y = top + max(0, (bottom - top - block_height) // 2)
+    for line in lines:
+        width = draw.textlength(line, font=current_font)
+        bbox = draw.textbbox((0, 0), line, font=current_font)
+        # Pillow's default text origin is above the actual glyph box. Offset
+        # it so the visible glyphs use the same centered block as the SVG.
+        draw.text(
+            ((W - width) / 2, y - bbox[1]),
+            line,
+            font=current_font,
+            fill=TEMPLATE_NAVY,
+        )
+        y += line_height
+
+
+def draw_person_photo(canvas, entry):
+    """Place the statement-specific photo in the template's top frame."""
+    if not entry["photo"].exists():
+        raise FileNotFoundError(f"Personenfoto fehlt: {entry['photo']}")
+
+    source = Image.open(entry["photo"]).convert("RGBA")
+    # Flatten possible transparent source pixels against white before fitting
+    # the image. This avoids black corners for the supplied RGBA portrait.
+    flattened = Image.new("RGBA", source.size, (255, 255, 255, 255))
+    flattened.alpha_composite(source)
+    photo = ImageOps.fit(
+        flattened.convert("RGB"),
+        (PHOTO_BOX[2] - PHOTO_BOX[0], PHOTO_BOX[3] - PHOTO_BOX[1]),
+        method=Image.Resampling.LANCZOS,
+        centering=entry["focus"],
+    )
+    canvas.paste(photo, PHOTO_BOX[:2])
+
+
+def draw_evp_logo(canvas):
+    """Place the supplied EVP logo in the footer's former red-X slot."""
+    if not EVP_LOGO_PATH.exists():
+        raise FileNotFoundError(f"EVP-Logo fehlt: {EVP_LOGO_PATH}")
+
+    logo = Image.open(EVP_LOGO_PATH).convert("RGBA")
+    logo = ImageOps.contain(logo, EVP_LOGO_SIZE, method=Image.Resampling.LANCZOS)
+    canvas.alpha_composite(logo, EVP_LOGO_POSITION)
 
 
 STATEMENTS = [
@@ -244,83 +396,32 @@ STATEMENTS = [
 ]
 
 
-def build(entry):
-    canvas = Image.new("RGBA", (W, H), MINT + (255,))
+def build(entry, index):
+    template_number = index % len(TEMPLATE_PATHS) + 1
+    template_path = TEMPLATE_PATHS[template_number - 1]
+    if not template_path.exists():
+        raise FileNotFoundError(f"Designer-Vorlage fehlt: {template_path}")
+
+    canvas = render_template(template_path, template_number)
+    draw_person_photo(canvas, entry)
+    draw_evp_logo(canvas)
     draw = ImageDraw.Draw(canvas)
 
-    # ---- top pill tag ----
-    tag_text = "PERSÖNLICHE STIMME"
-    tag_font = font(30)
-    tw = draw.textlength(tag_text, font=tag_font)
-    pill_w, pill_h = int(tw + 72), 74
-    pill_box = [(W - pill_w) // 2, 78, (W - pill_w) // 2 + pill_w, 78 + pill_h]
-    draw.rounded_rectangle(pill_box, radius=pill_h // 2, fill=NAVY + (255,))
-    draw.text((pill_box[0] + 36, pill_box[1] + 20), tag_text, font=tag_font, fill=WHITE)
+    name_font = fit_single_line(draw, entry["name"], 1000, 65, 40)
+    role_font = fit_single_line(draw, entry["role"], 1000, 50, 32)
+    draw_baseline_text(draw, entry["name"], 40.6, 710.3, name_font)
+    draw_baseline_text(draw, entry["role"], W / 2, 773.7, role_font, centered=True)
+    draw_quote(draw, entry["quote"])
 
-    # ---- portrait ----
-    diameter = 460
-    portrait_top = 210
-    cx = W // 2
-    ring = 16
-    shadow_box = (cx - diameter // 2 - ring, portrait_top - ring, cx + diameter // 2 + ring, portrait_top + diameter + ring)
-    soft_shadow(canvas, shadow_box, radius=0, blur=26, opacity=60, shape="ellipse")
-    draw.ellipse(shadow_box, fill=WHITE + (255,))
-    portrait = circle_portrait(entry["photo"], diameter, entry["focus"])
-    canvas.alpha_composite(portrait, (cx - diameter // 2, portrait_top))
-
-    # ---- name / role ----
-    name_y = portrait_top + diameter + 46
-    draw_centered(draw, entry["name"], name_y, 62, NAVY + (255,))
-    role_y = name_y + 78
-    draw_centered(draw, entry["role"], role_y, 34, NAVY + (200,))
-
-    # ---- quote card ----
-    card_top = role_y + 80
-    card_bottom = 1430
-    card_margin = 74
-    card_box = [card_margin, card_top, W - card_margin, card_bottom]
-    soft_shadow(canvas, card_box, radius=36, blur=24, opacity=45, corner_radius=36)
-    draw.rounded_rectangle(card_box, radius=36, fill=WHITE + (255,))
-
-    # decorative quote mark
-    qmark_font = font(160)
-    draw.text((card_box[0] + 34, card_box[1] - 34), "\u201e", font=qmark_font, fill=MINT_LIGHT + (255,))
-
-    pad_x = 70
-    top_clearance = 150  # keeps quote text clear of the decorative quote mark
-    bottom_pad = 60
-    max_w = (card_box[2] - card_box[0]) - pad_x * 2
-    max_h = (card_box[3] - card_box[1]) - top_clearance - bottom_pad
-    qfont, lines, line_h = fit_quote(draw, entry["quote"], max_w, max_h, start_size=48, min_size=30)
-    total_h = line_h * len(lines)
-    avail_h = (card_box[3] - card_box[1]) - top_clearance - bottom_pad
-    ty = card_box[1] + top_clearance + max(0, (avail_h - total_h) // 2)
-    for line in lines:
-        draw.text((card_box[0] + pad_x, ty), line, font=qfont, fill=NAVY + (255,))
-        ty += line_h
-
-    # ---- CTA lockup (same copy as 260731_Ja-zur-Badi-Digital-1080x1920.jpg) ----
-    cta_font = font(58)
-    draw.text((card_margin, 1478), "JA zur Sanierung unserer Badi.", font=cta_font, fill=NAVY + (255,))
-    link_font = font(44)
-    draw.text((card_margin, 1478 + 76), "\u2192 badi-ja.ch", font=link_font, fill=NAVY + (255,))
-
-    # ---- footer ----
-    footer_h = 222
-    footer_top = H - footer_h
-    draw.rectangle([0, footer_top, W, H], fill=WHITE + (255,))
-    paste_logo_row(canvas, footer_top + footer_h // 2, footer_h)
-
-    out_path = OUT_DIR / f"statement-{entry['slug']}.jpg"
-    canvas.convert("RGB").save(out_path, quality=92)
-    print("wrote", out_path)
+    out_path = OUT_DIR / f"statement-{entry['slug']}.png"
+    canvas.convert("RGB").save(out_path, format="PNG", optimize=True)
+    print(f"wrote {out_path} (Vorlage {template_number:02d})")
 
 
 def main():
     ensure_font()
-    ensure_logo_pngs()
-    for entry in STATEMENTS:
-        build(entry)
+    for index, entry in enumerate(STATEMENTS):
+        build(entry, index)
 
 
 if __name__ == "__main__":
