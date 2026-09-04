@@ -449,7 +449,7 @@ STATEMENTS = [
     dict(
         slug="timo-wuersch",
         name="Timo Würsch",
-        role="",
+        role="Co-Präsident GLP Schaffhausen",
         photo=STATEMENTS_DIR / "TimoWursch.jpg",
         focus=(0.5, 0.5),
         quote=(
