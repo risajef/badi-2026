@@ -9,8 +9,10 @@ Run: python3 scripts/generate_social_posts.py
 Output: site/assets/social/*.png (1080x1920)
 """
 
+import re
 import subprocess
 import xml.etree.ElementTree as ET
+from copy import deepcopy
 from functools import lru_cache
 from pathlib import Path
 
@@ -45,8 +47,9 @@ TEMPLATE_PATHS = [
     TEMPLATE_DIR / f"Badi-Beringen-Social-Media_1080x1920-{number:02d}.svg"
     for number in range(1, 5)
 ]
-TEMPLATE_RENDER_VERSION = "v2"
+TEMPLATE_RENDER_VERSION = "v3"
 PHOTO_BOX = (330, 146, 750, 566)
+PHOTO_FOREGROUND_MAX_Y = 700
 EVP_LOGO_POSITION = (318, 1769)
 EVP_LOGO_SIZE = (91, 91)
 
@@ -104,8 +107,21 @@ def is_vectorized_quote(element):
     )
 
 
+def has_photo_foreground_path(element):
+    """Identify the illustration group drawn over the photo frame."""
+    number = r"[-+]?(?:\d+(?:\.\d*)?|\.\d+)"
+    move_pattern = re.compile(rf"^\s*M\s*({number})\s*[, ]\s*({number})")
+    for descendant in element.iter():
+        if local_name(descendant.tag) != "path":
+            continue
+        match = move_pattern.match(descendant.attrib.get("d", ""))
+        if match and float(match.group(2)) <= PHOTO_FOREGROUND_MAX_Y:
+            return True
+    return False
+
+
 def clean_template(template_path):
-    """Remove sample copy and the two raster placeholders from a template."""
+    """Build the cleaned background and the transparent figure foreground."""
     ET.register_namespace("", SVG_NS)
     ET.register_namespace("xlink", XLINK_NS)
     root = ET.parse(template_path).getroot()
@@ -152,7 +168,29 @@ def clean_template(template_path):
             if is_top_placeholder or is_footer_placeholder:
                 parent.remove(child)
 
-    return ET.tostring(root, encoding="unicode")
+    foreground_groups = [
+        child
+        for child in root
+        if local_name(child.tag) == "g" and has_photo_foreground_path(child)
+    ]
+    if len(foreground_groups) != 1:
+        raise RuntimeError(
+            f"Expected one photo foreground group in {template_path}, "
+            f"found {len(foreground_groups)}"
+        )
+
+    foreground_group = foreground_groups[0]
+    root.remove(foreground_group)
+    foreground_root = ET.Element(root.tag, root.attrib)
+    for child in root:
+        if local_name(child.tag) == "defs":
+            foreground_root.append(deepcopy(child))
+    foreground_root.append(foreground_group)
+
+    return (
+        ET.tostring(root, encoding="unicode"),
+        ET.tostring(foreground_root, encoding="unicode"),
+    )
 
 
 def render_template(template_path, template_number):
@@ -163,30 +201,42 @@ def render_template(template_path, template_number):
     png_path = CACHE_DIR / (
         f"social-template-{template_number:02d}-{TEMPLATE_RENDER_VERSION}-clean.png"
     )
+    foreground_path = CACHE_DIR / (
+        f"social-template-{template_number:02d}-{TEMPLATE_RENDER_VERSION}-foreground.svg"
+    )
+    foreground_png_path = CACHE_DIR / (
+        f"social-template-{template_number:02d}-{TEMPLATE_RENDER_VERSION}-foreground.png"
+    )
 
     # Rebuild the cached render whenever the designer replaces a template.
-    if (
-        not clean_path.exists()
-        or not png_path.exists()
-        or png_path.stat().st_mtime < template_path.stat().st_mtime
+    cache_paths = (clean_path, png_path, foreground_path, foreground_png_path)
+    if any(
+        not path.exists() or path.stat().st_mtime < template_path.stat().st_mtime
+        for path in cache_paths
     ):
-        clean_path.write_text(clean_template(template_path), encoding="utf-8")
+        clean_svg, foreground_svg = clean_template(template_path)
+        clean_path.write_text(clean_svg, encoding="utf-8")
+        foreground_path.write_text(foreground_svg, encoding="utf-8")
         try:
-            subprocess.run(
-                [
-                    "inkscape",
-                    str(clean_path),
-                    "--export-filename",
-                    str(png_path),
-                    "--export-width",
-                    str(W),
-                    "--export-height",
-                    str(H),
-                ],
-                check=True,
-                capture_output=True,
-                text=True,
-            )
+            for svg_path, output_path in (
+                (clean_path, png_path),
+                (foreground_path, foreground_png_path),
+            ):
+                subprocess.run(
+                    [
+                        "inkscape",
+                        str(svg_path),
+                        "--export-filename",
+                        str(output_path),
+                        "--export-width",
+                        str(W),
+                        "--export-height",
+                        str(H),
+                    ],
+                    check=True,
+                    capture_output=True,
+                    text=True,
+                )
         except FileNotFoundError as error:
             raise RuntimeError(
                 "Inkscape ist zum Rendern der Social-Media-Vorlagen nicht installiert."
@@ -197,7 +247,10 @@ def render_template(template_path, template_number):
                 f"Vorlage {template_path.name} konnte nicht gerendert werden: {details}"
             ) from error
 
-    return Image.open(png_path).convert("RGBA")
+    return (
+        Image.open(png_path).convert("RGBA"),
+        Image.open(foreground_png_path).convert("RGBA"),
+    )
 
 
 def fit_single_line(draw, text, max_width, start_size, min_size):
@@ -393,6 +446,20 @@ STATEMENTS = [
             "in Begegnungen, in unsere Kinder und in unsere Gemeinschaft."
         ),
     ),
+    dict(
+        slug="timo-wuersch",
+        name="Timo Würsch",
+        role="",
+        photo=STATEMENTS_DIR / "TimoWursch.jpg",
+        focus=(0.5, 0.5),
+        quote=(
+            "Die Naturbadi Beringen ist nicht nur Ort für Spass, Sport und "
+            "Entspannung, sondern mit ihrer chlorfreien Wasseraufbereitung "
+            "ein Vorzeigeprojekt für umweltfreundliche, nachhaltige "
+            "Spitzentechnologie. Solche Technologien stärken den lokalen "
+            "Wirtschaftsstandort. Deshalb ein klares Ja!"
+        ),
+    ),
 ]
 
 
@@ -402,8 +469,9 @@ def build(entry, index):
     if not template_path.exists():
         raise FileNotFoundError(f"Designer-Vorlage fehlt: {template_path}")
 
-    canvas = render_template(template_path, template_number)
+    canvas, foreground = render_template(template_path, template_number)
     draw_person_photo(canvas, entry)
+    canvas.alpha_composite(foreground)
     draw_evp_logo(canvas)
     draw = ImageDraw.Draw(canvas)
 
