@@ -493,7 +493,7 @@ STATEMENTS = [
     dict(
         slug="claudia-oberle",
         name="Claudia Oberle",
-        role="GLP SH Gründungsmitglied / ehemaliges Mitglied Bürgerkommission Beringen",
+        role="GLP SH Gründungsmitglied",
         photo=STATEMENTS_DIR / "Claudia-Oberle.jpg",
         focus=(0.5, 0.45),
         quote=(
