@@ -460,6 +460,54 @@ STATEMENTS = [
             "Wirtschaftsstandort. Deshalb ein klares Ja!"
         ),
     ),
+    dict(
+        slug="beatrix-delafontaine",
+        name="Beatrix Delafontaine",
+        role="Einwohnerrätin FDP",
+        photo=STATEMENTS_DIR / "Beatrix Delafontaine.jpeg",
+        focus=(0.5, 0.3),
+        quote=(
+            "Natürliches Badeerlebnis: Die Naturbadi Beringen gefällt mir "
+            "besonders, weil das Wasser natürlich aufbereitet wird und ohne "
+            "herkömmliche chemische Aufbereitung auskommt. Dadurch entsteht "
+            "ein naturnahes und angenehmes Badeerlebnis."
+        ),
+    ),
+    dict(
+        slug="stefan-huber",
+        name="Stefan Huber",
+        role="Entwickler aus Zürich",
+        photo=STATEMENTS_DIR / "stefan-huber.png",
+        focus=(0.5, 0.42),
+        quote=(
+            "Als regelmässiger Besucher von Beringen versuche ich es immer "
+            "so einzurichten, dass ich nach meinen Terminen noch genügend "
+            "Zeit habe, auch bei der Badi vorbeizugehen. Als begeisterter "
+            "Schwimmer ist die Naturbadi für mich etwas ganz Besonderes – so "
+            "etwas begegnet mir sonst nie. Gerade das ungechlorte Wasser "
+            "macht das Schwimmen dort für mich zu etwas Speziellem. Deshalb "
+            "gehört ein Besuch in der Badi für mich inzwischen fast schon zu "
+            "einem Aufenthalt in Beringen dazu."
+        ),
+    ),
+    dict(
+        slug="claudia-oberle",
+        name="Claudia Oberle",
+        role="GLP SH Gründungsmitglied / ehemaliges Mitglied Bürgerkommission Beringen",
+        photo=STATEMENTS_DIR / "Claudia-Oberle.jpg",
+        focus=(0.5, 0.45),
+        quote=(
+            "Unsere Naturbadi ist weit mehr als ein Schwimmbad: Sie schafft "
+            "einen attraktiven und umweltfreundlichen Treffpunkt für Kinder "
+            "und Jugendliche, Familien und ältere Menschen, sie fördert "
+            "Bewegung, Erholung und sicheres Schwimmenlernen für Kinder. "
+            "Gerade dieser heisse Sommer hat gezeigt, wie wichtig eine Badi "
+            "ist, sie trägt bei zu einem gesunden Lebensraum, "
+            "Familienfreundlichkeit und ein lebendiges Beringen. Daher von "
+            "meiner Seite ein klares Ja zur umweltfreundlichen Sanierung der "
+            "Badi."
+        ),
+    ),
 ]
 
 
@@ -476,7 +524,7 @@ def build(entry, index):
     draw = ImageDraw.Draw(canvas)
 
     name_font = fit_single_line(draw, entry["name"], 1000, 65, 40)
-    role_font = fit_single_line(draw, entry["role"], 1000, 50, 32)
+    role_font = fit_single_line(draw, entry["role"], 1000, 50, 24)
     draw_baseline_text(draw, entry["name"], 40.6, 710.3, name_font)
     draw_baseline_text(draw, entry["role"], W / 2, 773.7, role_font, centered=True)
     draw_quote(draw, entry["quote"])

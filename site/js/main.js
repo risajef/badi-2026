@@ -20,6 +20,27 @@ function handleInitialScroll() {
   window.scrollTo(0, 0);
 }
 
+// -----------------------------------------------------------------------------
+// Random statement order
+// -----------------------------------------------------------------------------
+
+(function initRandomStatementOrder() {
+  const track = document.querySelector('.statements__grid');
+  if (!track) return;
+
+  const cards = Array.from(track.children).filter((child) =>
+    child.classList.contains('statement-card')
+  );
+
+  // Fisher-Yates gives every possible order the same probability.
+  for (let index = cards.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [cards[index], cards[swapIndex]] = [cards[swapIndex], cards[index]];
+  }
+
+  cards.forEach((card) => track.appendChild(card));
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
   handleInitialScroll();
 

@@ -873,19 +873,42 @@ main {
 }
 
 .statements__grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
   gap: 1.5rem;
   align-items: stretch;
   text-align: left;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.25rem 0.25rem 1rem;
+  margin: 0 -0.25rem;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scrollbar-color: var(--color-water-dark) transparent;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.statements__grid:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 0.35rem;
+}
+
+.statements__grid::-webkit-scrollbar {
+  height: 0.55rem;
+}
+
+.statements__grid::-webkit-scrollbar-thumb {
+  background: var(--color-water-dark);
+  border-radius: var(--radius-full);
 }
 
 .statement-card {
   position: relative;
   display: flex;
   flex-direction: column;
+  flex: 0 0 calc((100% - 3rem) / 3);
   min-width: 0;
-  height: 100%;
+  height: auto;
   margin: 0;
   padding: 1.75rem 1.5rem 1.5rem;
   background: var(--color-card-bg);
@@ -894,6 +917,7 @@ main {
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   overflow: hidden;
+  scroll-snap-align: start;
   transition: transform var(--transition-base), box-shadow var(--transition-base);
 }
 
@@ -944,12 +968,6 @@ main {
 
 .statement-card__portrait--lukas img {
   object-position: 50% 45%;
-}
-
-.statement-card--long {
-  grid-column: 1 / -1;
-  width: calc(50% - 0.75rem);
-  justify-self: center;
 }
 
 .statement-card blockquote p + p {
@@ -1042,19 +1060,23 @@ main {
   flex: 0 0 auto;
 }
 
+@media (max-width: 900px) {
+  .statement-card {
+    flex-basis: calc((100% - 1.5rem) / 2);
+  }
+}
+
 @media (max-width: 560px) {
   .statements {
     padding: 3.5rem 1rem;
   }
 
   .statements__grid {
-    grid-template-columns: 1fr;
     gap: 1.25rem;
   }
 
-  .statement-card--long {
-    grid-column: auto;
-    width: auto;
+  .statement-card {
+    flex-basis: min(86vw, 22rem);
   }
 }
 
