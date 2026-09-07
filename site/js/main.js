@@ -421,3 +421,34 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCountdown();
   setInterval(updateCountdown, 30000);
 })();
+
+// -----------------------------------------------------------------------------
+// Collapsible Statements
+// -----------------------------------------------------------------------------
+
+function initCollapsibleStatements() {
+  const blocks = document.querySelectorAll('.collapsible-text');
+  blocks.forEach((block) => {
+    const btn = block.nextElementSibling;
+    if (btn && btn.classList.contains('btn-read-more')) {
+      // Check if the content is overflowing
+      const isOverflowing = block.scrollHeight > block.clientHeight;
+      if (isOverflowing || block.classList.contains('is-expanded')) {
+        btn.hidden = false;
+        // Avoid adding multiple listeners if called again
+        if (!btn.dataset.initialized) {
+          btn.dataset.initialized = "true";
+          btn.addEventListener('click', () => {
+            const isExpanded = block.classList.toggle('is-expanded');
+            btn.textContent = isExpanded ? 'Weniger anzeigen' : 'Mehr lesen';
+            btn.setAttribute('aria-expanded', isExpanded);
+          });
+        }
+      } else {
+        btn.hidden = true;
+      }
+    }
+  });
+}
+window.addEventListener('load', initCollapsibleStatements);
+window.addEventListener('resize', initCollapsibleStatements);
