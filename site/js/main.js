@@ -407,7 +407,7 @@ document.addEventListener('DOMContentLoaded', () => {
 })();
 
 // -----------------------------------------------------------------------------
-// Live Countdown to 27. September 2026, 10:00
+// Countdown to 27. September 2026, 10:00; show the result afterwards.
 // -----------------------------------------------------------------------------
 
 (function initCountdown() {
@@ -422,7 +422,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const diff = targetDate - now;
 
     if (diff <= 0) {
-      countdownVal.textContent = 'Abstimmung läuft!';
+      countdownVal.textContent = '63 % Ja';
       return;
     }
 

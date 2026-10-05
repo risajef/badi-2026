@@ -236,10 +236,113 @@ main {
 
 .poster-section {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
+  gap: 1rem;
   padding: 2rem 1rem;
   background: linear-gradient(180deg, var(--color-body-bg) 0%, var(--color-water) 100%);
+}
+
+.result-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem 1.25rem;
+  overflow: hidden;
+  color: #ffffff;
+  background: linear-gradient(120deg, var(--color-primary) 0%, #197b85 100%);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.result-banner::after {
+  content: "";
+  position: absolute;
+  right: -2.5rem;
+  bottom: -3rem;
+  width: 10rem;
+  height: 6rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  transform: rotate(-8deg);
+  pointer-events: none;
+}
+
+.result-banner__message,
+.result-banner__link {
+  position: relative;
+  z-index: 1;
+}
+
+.result-banner__message {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  column-gap: 0.55rem;
+  row-gap: 0.1rem;
+}
+
+.result-banner__eyebrow {
+  flex-basis: 100%;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.result-banner__result {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  line-height: 1.1;
+}
+
+.result-banner__subline {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.result-banner__link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.result-banner__link:hover,
+.result-banner__link:focus-visible {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #ffffff;
+}
+
+.result-banner__link:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+@media (max-width: 560px) {
+  .result-banner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .result-banner__link {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .poster {
